@@ -1,0 +1,16 @@
+/* Core */
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: "montserrat";
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url('../font.ttf');
+}

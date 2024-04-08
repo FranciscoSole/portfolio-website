@@ -1,0 +1,17 @@
+/* Main */
+
+#loading, #aboutMe, #blind, #menu, #item, .mainText, video{
+    width: 100%;
+}
+
+#loading{
+    display: grid;
+}
+
+video, #blind{
+    height: 100vh;
+}
+
+video{
+    object-fit: fill;
+}

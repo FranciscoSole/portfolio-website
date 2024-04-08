@@ -1,0 +1,33 @@
+/* Info */
+
+body{
+    background-image: url("../img/info/background.webp");
+    height: 100vh;
+}
+
+img{
+    height: 50vh;
+}
+
+#space{
+    height: 1vh;
+}
+
+#group{
+    display: grid;
+    align-self: center;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+#text{
+    font-size: 5em;
+    grid-area: 1;
+}
+
+#myPhoto{
+    justify-self: right;
+    align-items: right; 
+}
+

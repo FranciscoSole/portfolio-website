@@ -1,0 +1,41 @@
+@keyframes fadeInAnimation {
+    0%{opacity: 0; z-index: 0;}
+    40%{opacity: 0; z-index: 0;}
+    51%{z-index: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes blindAnimation{
+    0%{top:-100vh; z-index: 2;}
+    80%{top: -100vh;}
+    100%{top: 8.45vh;}
+}
+
+#blind, .loadingText, .mainText{
+    position: absolute;
+}
+
+.loadingText, .mainText{
+    place-self: center;
+    text-align: center;
+}
+
+#blind{
+    top: -50vh;
+    z-index: 2;
+    background-color: black;
+    animation: blindAnimation ease 10.85s 1;
+}
+
+.loadingText{
+    z-index: 1;
+    animation: fadeInAnimation ease 6s 2 alternate;
+}
+
+#name{
+    font-size: 5.25em;
+}
+
+#position{
+    font-size: 2em;
+}

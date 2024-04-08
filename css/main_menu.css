@@ -1,0 +1,25 @@
+/* Main menu */
+
+.mainText{
+    z-index: 3;
+    animation: fadeInAnimation ease 1.8s;
+}
+.mainText > #name{
+    font-weight: 120;
+}
+
+#menu{
+    display: flex;
+    z-index: 4;
+}
+
+#item{
+    font-weight: 135;
+    font-size: 1.65em;
+    margin-top: 28.5vh;
+}
+
+#item > a:hover{
+    color: yellow;
+    animation-fill-mode: ease 2s;
+}
