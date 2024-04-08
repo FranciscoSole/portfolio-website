@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Proyectos</title>
+</head>
+<body> 
+    <nav>
+        <div id="name"><a href="https://www.linkedin.com/in/franciscosole" target="_blank">Francisco Solé</a></div>
+        <div id="item">Contacto</div>
+        <div id="item"><a href="main">Sobre mí</a></div>
+        <div id="item"><a href="#">Proyectos</a></div>
+    </nav>
+    <main>
+        <h1>Bienvenid@ a mi portfolio</h1>
+        <div id="btns">
+            <button type="button" id="facultadBtn" onclick="showHide('fac')">Facultad</button>
+            <button type="button" id="hobbyBtn" onclick="showHide('hobby')">Hobby</button>
+        </div>
+        <section id="facultad">
+            <div id="firstCategory"><h2>Primer año</h2></div>
+            <section id="proyectos">
+                <div id="pizzeria">
+                    <div id="title"><h4>Pizzería UADE</h4></div>
+                    <div id="img"><img src="img/proyectos/pizzeria/inicio.JPG" alt="Página de inicio de la pizzería."></div>
+                    <div id="text">
+                        Es mi primer TPO de la facultad y debíamos inventar un negocio gastronomico. Hecho con HTML, CSS, JavaScript y un poco de Bootstrap.
+                        <button type="button" id="verMasBtn">Ver más</button>
+                    </div>                
+                </div>
+                <div id="cuatroEnRaya">
+                    <div id="title"><h4>4 en raya</h4></div>
+                    <div id="img"><img src="img/proyectos/4enraya/inicio.JPG" alt="Menu de inicio del 4 en raya"></div>
+                    <div id="text">
+                        Era un TPO grupal en el que teníamos que crear un juego solo con lo visto en clase. En este TPO fui el lider y principal desarrollador. Hecho en Python.
+                        <button type="button" id="verMasBtn">Ver más</button>
+                    </div>                
+                </div>
+            </section>
+    
+            <div id="category"><h2>Segundo año</h2></div>
+            <div><h3 id="categoryDesc">En ellos fui el líder y principal desarrollador</h3></div>
+            <section id="proyectos">
+                <div id="alumnos">
+                    <div id="title"><h4>Gestor de alumnos</h4></div>
+                    <div id="img"><img src="img/proyectos/alumnos/inicio.JPG" alt="Menu de inicio con alumnos ya cargados"></div>
+                    <div id="text">
+                        El foco de este TPO grupal era poder gestionar a los alumnos de una institución utilizando TDAs y estructura de lista enlazada. Hecho en Java.
+                        <button type="button" id="verMasBtn">Ver más</button>
+                    </div>          
+                </div>
+                <div id="market">
+                    <div id="title"><h4>Market</h4></div>
+                    <div id="img"><img src="img/proyectos/market/inicioFinal.JPG" alt="Menu de inicio con productos ya cargados y alguna venta realizada"></div>
+                    <div id="text">
+                        Este TPO grupal trata sobre un mercado y todo lo que eso refiere, que se realizaba completamente orientado a objetos. Hecho en Java.
+                        <button type="button" id="verMasBtn">Ver más</button>
+                    </div>          
+                </div>
+            </section>
+        </section>
+        <section id="hobby">
+            boenas
+        </section>
+    </main>
+    <footer>
+        <div id="textFooter">Derechos reservados</div>
+    </footer>
+    <script src="fnc.js"></script>
+</body>
+</html>
