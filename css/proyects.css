@@ -1,0 +1,61 @@
+@keyframes moveOut {
+    
+}
+
+img{
+    width: 100%;
+    height: 50vh;
+    opacity: .3;
+}
+
+nav{
+    background-color: black;
+    position: relative;
+    z-index: 2;
+}
+
+nav > #name, #item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+nav > #name{
+    float: left;
+    margin-left: 20px;
+}
+
+nav > #item{
+    float: right;
+    margin-right: 20px;
+}
+
+#item > a:hover {
+    color: yellow;
+}
+
+#item > .active{
+    color: yellow;
+}
+
+#categories{
+    background-color: black;
+    z-index: 1;
+}
+
+#university, #hobby{
+    position: relative;
+}
+
+#university > .text,  #hobby > .text{
+    position: absolute;
+    top:50%;
+    right:50%;
+    transform:translate(50%, -50%);
+    text-align: center;
+}
+
+#university > .text > #name, #hobby > .text > #name{
+    color: #cda45e;
+    font-weight: 100;
+    font-size: 6em;
+}
