@@ -15,8 +15,8 @@ nav{
 }
 
 nav > #name, #item{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 nav > #name{
@@ -29,14 +29,9 @@ nav > #item{
     margin-right: 20px;
 }
 
-#item > a:hover {
-    color: yellow;
+#item > a:hover, .active {
+    color: #cda45e;
 }
-
-#item > .active{
-    color: yellow;
-}
-
 #categories{
     background-color: black;
     z-index: 1;
