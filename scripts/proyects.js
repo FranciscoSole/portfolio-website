@@ -151,6 +151,10 @@ function setAnimation(sectionElement, keyframe, time="3s", relativePosition=true
     }
 }
 
+/**
+ * Muestra o esconde los skills del proyecto dependiendo de que si se están mostrando (los skills) o no 
+ * @param {element} proyectElement = proyecto al que se le hace :hover
+ */
 function showHideProyectSkills(proyectElement){
     try{
         let proyectMainInfo = proyectElement.children[0];
@@ -173,6 +177,11 @@ function showHideProyectSkills(proyectElement){
     }
 }
 
+/**
+ * Valida que un elemento esté escondido
+ * @param {element} proyectElement = el elemento a validar
+ * @returns {boolean} = devuelve true solamente si el display del elemento es none
+ */
 function isHidden(proyectElement){
     try{
         return (proyectElement.style.display == "none");
