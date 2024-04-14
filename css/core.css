@@ -5,7 +5,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-family: "montserrat";
     box-sizing: border-box;
 }
@@ -13,4 +13,10 @@
 @font-face {
     font-family: "montserrat";
     src: url('../font.ttf');
+}
+
+video{
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
 }

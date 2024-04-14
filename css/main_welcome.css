@@ -8,9 +8,9 @@
 }
 
 @keyframes blindAnimation{
-    0%{top:-100vh; z-index: 2;}
-    80%{top: -100vh;}
-    100%{top: 8.45vh;}
+    0%{top:-100vh;z-index: 2;}
+    80%{bottom: 100vh;}
+    100%{bottom: 0vh;}
 }
 
 #blind, .loadingText, .mainText{
@@ -23,14 +23,12 @@
 }
 
 #blind{
-    top: -50vh;
-    z-index: 1;
     background-color: black;
     animation: blindAnimation ease 10.85s 1;
 }
 
 .loadingText{
-    z-index: 2;
+    z-index: 1;
     animation: fadeInAnimation ease 6s 2 alternate;
 }
 

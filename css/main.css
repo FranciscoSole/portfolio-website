@@ -8,10 +8,6 @@
     display: grid;
 }
 
-video, #blind{
+#blind{
     height: 100vh;
-}
-
-video{
-    object-fit: fill;
 }

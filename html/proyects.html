@@ -9,73 +9,100 @@
     <meta name="description" content="Mi portafolio como desarrollador backend">
     <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="../css/proyects.css">
+    <link rel="stylesheet" href="../css/proyects_menu.css">
     <title>Francisco Solé - Proyectos</title>
 </head>
 <body> 
-    <nav>
+    <nav class="clearfix">
         <div id="name"><a href="https://www.linkedin.com/in/franciscosole" target="_blank">Francisco Solé</a></div>
         <div id="item"><a href="#">Contacto</a></div>
-        <div id="item"><a href="#" class="active">Proyectos</a></div>
-        <div id="item"><a href="info.html">Sobre mí</a></div>
+        <div id="item"><a href="../html/info.html">Sobre mí</a></div>
+        <div id="item"><a href="../html/proyects.html" class="active">Proyectos</a></div>
         <div id="item"><a href="../index.html">Inicio</a></div>
     </nav>
-    <div id="categories">
-        <div id="university">
-            <img src="../img/uade.jpg"> <!-- Original image: https://www.uade.edu.ar/media/l2bjw5hp/frente-monserrat-noche.jpg?center=0.64200207002948817,0.49796876344469887&mode=crop&width=1900&height=580&rnd=133483364545500000 -->
-            <div class="text">
+    <main>
+        <section id="university">
+            <div class="text" onclick="openSectionProyects('university', 'hobby')">
                 <div id="name">Facultad</div>
-                <div id="description">Realizados durante la cursada de distintas materias</div>
+                <div id="description">Realizados durante la cursada de distintas materias</div> 
             </div>
-        </div>
-        <div id="hobby">
-            <img src="../img/hobby.jpg"> <!-- Original image: https://www.freepik.com/free-photo/top-view-set-gadgets-purple-neon-light-pink_10584199.htm#fromView=search&page=2&position=13&uuid=259017ce-85f1-4a0b-81eb-4c8e8a82fc55 -->
-            <div class="text">
+        </section>
+        <section id="hobby">
+            <div class="text" onclick="openSectionProyects('hobby', 'university')">
                 <div id="name">Hobby</div>
-                <div id="description">Realizados por pleno ocio</div>
+                <div id="description">Realizados por goce y crecimiento personal</div>
+            </div>
+        </section>
+        
+        <div id="goBack" onclick="closeSectionProyects('university', 'hobby')"></div>
+        <div id="universityProyects">
+            <div id="marketProyect" class="proyect" onmouseenter="showHideProyectSkills(this)" onmouseleave="showHideProyectSkills(this)" onclick="window.open('https://github.com/FranciscoSole/TPO-POO', '_blank')">
+                <div class="proyectMainInfo">
+                    <div class="proyectName">Gestor de negocio</div>
+                    <class class="proyectSkills" name="proyectInfo">
+                        <img src="../img/java.svg" class="java" alt="Ícono de Java"> <!-- Original image: https://icons-for-free.com/java+original+wordmark-1324760550562670345/ -->
+                        <img src="../img/OOP.svg" id="oop" alt="Ícono de OOP"> <!-- Original image: https://commons.wikimedia.org/wiki/File:OOP.svg -->
+                    </class>
+                </div>
+            </div>
+
+            <div id="studentProyect" class="proyect" onmouseenter="showHideProyectSkills(this)" onmouseleave="showHideProyectSkills(this)" onclick="window.open('https://github.com/FranciscoSole/TPO-Program-II', '_blank')">
+                <div class="proyectMainInfo">
+                    <div class="proyectName">Gestor de alumnos</div>
+                    <div class="proyectSkills" name="proyectInfo">
+                        <img src="../img/java.svg" class="java" alt="Ícono de Java"> <!-- Original image: https://icons-for-free.com/java+original+wordmark-1324760550562670345/ -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="fourInARowProyect" class="proyect" onmouseenter="showHideProyectSkills(this)" onmouseleave="showHideProyectSkills(this)" onclick="window.open('https://github.com/FranciscoSole/TPO-Program-I', '_blank')">
+                <div class="proyectMainInfo">
+                    <div class="proyectName">Cuatro en raya</div>
+                    <div class="proyectSkills" name="proyectInfo">
+                        <img src="../img/python.svg" id="python" alt="Ícono de Python"> <!-- Original image: https://icons-for-free.com/python-1331550892661227292/ -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="pizzaShopProyect" class="proyect" onmouseenter="showHideProyectSkills(this)" onmouseleave="showHideProyectSkills(this)" onclick="window.open('https://github.com/FranciscoSole/TPO-DisenoYDesarrolloWeb', '_blank')">
+                <div class="proyectMainInfo">
+                    <div class="proyectName">Pizzería UADE</div>
+                    <div class="proyectSkills" name="proyectInfo">
+                        <img src="../img/html5.svg" id="html5" alt="Ícono de HTML5"> <!-- Original image: https://www.iconfinder.com/icons/294678/html5_icon -->
+                        <img src="../img/css.svg" id="css" alt="Ícono de CSS"> <!-- Original image: https://www.iconfinder.com/icons/6725435/css_document_extension_file_file_format_file_type_format_icon -->
+                        <img src="../img/javascript.svg" id="javascript" alt="Ícono de Javascript"> <!-- Original image: https://icons-for-free.com/javascript+original-1324760550805182024/ -->
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-           <!-- <div id="firstCategory"><h2>Primer año</h2></div>
-            <section id="proyectos">
-                <div id="pizzeria">
-                    <div id="title"><h4>Pizzería UADE</h4></div>
-                    <div id="img"><img src="img/proyectos/pizzeria/inicio.JPG" alt="Página de inicio de la pizzería."></div>
-                    <div id="text">
-                        Es mi primer TPO de la facultad y debíamos inventar un negocio gastronomico. Hecho con HTML, CSS, JavaScript y un poco de Bootstrap.
-                        <button type="button" id="verMasBtn">Ver más</button>
-                    </div>                
-                </div>
-                <div id="cuatroEnRaya">
-                    <div id="title"><h4>4 en raya</h4></div>
-                    <div id="img"><img src="img/proyectos/4enraya/inicio.JPG" alt="Menu de inicio del 4 en raya"></div>
-                    <div id="text">
-                        Era un TPO grupal en el que teníamos que crear un juego solo con lo visto en clase. En este TPO fui el lider y principal desarrollador. Hecho en Python.
-                        <button type="button" id="verMasBtn">Ver más</button>
-                    </div>                
-                </div>
-            </section>
 
-            <div id="category"><h2>Segundo año</h2></div>
-            <div><h3 id="categoryDesc">En ellos fui el líder y principal desarrollador</h3></div>
-            <section id="proyectos">
-                <div id="alumnos">
-                    <div id="title"><h4>Gestor de alumnos</h4></div>
-                    <div id="img"><img src="img/proyectos/alumnos/inicio.JPG" alt="Menu de inicio con alumnos ya cargados"></div>
-                    <div id="text">
-                        El foco de este TPO grupal era poder gestionar a los alumnos de una institución utilizando TDAs y estructura de lista enlazada. Hecho en Java.
-                        <button type="button" id="verMasBtn">Ver más</button>
-                    </div>          
+        <div id="hobbyProyects">
+            <div id="portfolioProyect" class="proyect" onmouseenter="showHideProyectSkills(this)" onmouseleave="showHideProyectSkills(this)"  onclick="window.open('https://github.com/FranciscoSole/Portafolio', '_blank')">
+                <div class="proyectMainInfo">
+                    <div class="proyectName">Portfolio</div>
+                    <div class="proyectSkills" name="proyectInfo">
+                        <img src="../img/html5.svg" id="html5" alt="Ícono de HTML5"> <!-- Original image: https://www.iconfinder.com/icons/294678/html5_icon -->
+                        <img src="../img/css.svg" id="css" alt="Ícono de CSS"> <!-- Original image: https://www.iconfinder.com/icons/6725435/css_document_extension_file_file_format_file_type_format_icon -->
+                        <img src="../img/javascript.svg" id="javascript" alt="Ícono de Javascript"> <!-- Original image: https://icons-for-free.com/javascript+original-1324760550805182024/ -->
+                    </div>
                 </div>
-                <div id="market">
-                    <div id="title"><h4>Market</h4></div>
-                    <div id="img"><img src="img/proyectos/market/inicioFinal.JPG" alt="Menu de inicio con productos ya cargados y alguna venta realizada"></div>
-                    <div id="text">
-                        Este TPO grupal trata sobre un mercado y todo lo que eso refiere, que se realizaba completamente orientado a objetos. Hecho en Java.
-                        <button type="button" id="verMasBtn">Ver más</button>
-                    </div>          
+            </div>
+
+            <div id="mtaServerProyect" class="proyect" onmouseenter="showHideProyectSkills(this)" onmouseleave="showHideProyectSkills(this)" onclick="window.open('https://github.com/FranciscoSole/Hobby', '_blank')">
+                <div class="proyectMainInfo">
+                    <div class="proyectName">Servidor MTA:SA</div>
+                    <div class="proyectSkills" name="proyectInfo">
+                        <img src="../img/lua.svg" id="lua" alt="Ícono de LUA"> <!-- Original image: https://icons-for-free.com/vscode+icons+type+lua-1324451381341479433/ -->
+                        <img src="../img/mySql.svg" id="mySql" alt="Ícono de MySQL"> <!-- Original image: https://icons-for-free.com/mysql+original+wordmark-1324760553527083815/ -->
+                    </div>
                 </div>
-            </section>
-        </section>-->
+            </div>
+        </div>
+        
+        <video autoplay muted loop id="proyectVid">
+            <source src="../vids/proyect.mp4" type="video/mp4"> <!-- Original vid: https://elements.envato.com/es/nature-dark-golden-color-sunset-ocean-view-waterfl-FTV448W -->
+        </video>
+    </main>
 </body>
 <script src="../scripts/proyects.js"></script>
 </html>

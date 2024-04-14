@@ -4,8 +4,10 @@
     z-index: 3;
     animation: fadeInAnimation ease 1.8s;
 }
+
 .mainText > #name{
     font-weight: 120;
+    transform: rotate(-.575deg);
 }
 
 #menu{
@@ -19,7 +21,11 @@
     margin-top: 28.5vh;
 }
 
-#item > a:hover{
-    color: yellow;
-    animation-fill-mode: ease 2s;
+#item > a:hover, #name > a:hover{
+    color: #cda45e;
+    animation-fill-mode: ease 4s;
+}
+
+.push{
+    padding-right: 100px!important;
 }
