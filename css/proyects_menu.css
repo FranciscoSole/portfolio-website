@@ -153,6 +153,10 @@
     background-image: url("../img/portfolio.webp"); /* Screenshot from original vid: https://elements.envato.com/es/nature-dark-golden-color-sunset-ocean-view-waterfl-FTV448W */
 }
 
+#fourInARowProyect{
+    background-image: url("../img/four.webp"); 
+}
+
 #html5, #css, #python, #oop{
     height: 5.5vh;
 }
