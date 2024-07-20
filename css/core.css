@@ -20,3 +20,38 @@ video{
     width: 100%;
     object-fit: fill;
 }
+
+.clearfix::after { 
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+nav{
+    position: relative;
+    background-color: black;
+}
+
+nav > #name, #item{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+nav > #name{
+    float: left;
+    margin-left: 20px;
+}
+
+nav > #item{
+    float: right;
+    margin-right: 20px;
+}
+
+a:hover, .active{
+    color: #cda45e;
+}
+
+main{
+    display: grid;
+}
