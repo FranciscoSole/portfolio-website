@@ -1,33 +1,93 @@
 /* Info */
 
-body{
-    /* background-image: url("../img/info/background.webp"); */
-    height: 100vh;
+@keyframes pulse {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .6;
+    }
 }
 
-img{
-    height: 50vh;
+@keyframes moveOutStart {
+    0%{transform: translateX(0%);}
+    70%{transform: translateX(-115%);}
 }
 
-#space{
-    height: 1vh;
+@keyframes moveInStart {
+    0%{transform: translateX(8%);} 
+    70%{transform: translateX(0%);}
 }
 
-#group{
-    display: grid;
-    align-self: center;
-    align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5px;
+@keyframes moveOutClicked {
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(-225%);}
 }
 
-#text{
-    font-size: 5em;
-    grid-area: 1;
+@keyframes moveInNext {
+    0%{transform: translateX(50%);} 
+    70%{transform: translateX(0%);}
 }
 
-#myPhoto{
-    justify-self: right;
-    align-items: right; 
+main{
+    background-color: #2d2d30;
+    width: 100%;
+    height: 96vh;
 }
 
+#start, #working, #student, #me{
+    display: inline-flex;
+    place-items: center;
+    place-self: center;
+}
+
+
+#start > #photo > img{
+    border-radius: 0vw 0vw 100vw 55vw;
+    border: 1vw;
+    height: 81vh;
+}
+
+#start > #whos{
+    margin-top: 20vh;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-bottom: 15vh;
+}
+
+#start > #whos > #title{
+    font-size: 4em;
+}
+
+#start > #whos > #arrow{
+    margin-top: 12vh;
+    margin-left: 13.5vw;
+}
+
+#working > #arrow, #student > #arrow, #me > #arrow{
+    margin-left: 16vw;
+}
+
+#arrow{
+    display: flex;
+    font-size: 1.6em;
+    animation: pulse ease .8s infinite alternate;
+    color: #cda45e;
+    text-shadow: .075vw .075vw .075vw #000
+}
+
+#arrow:hover{
+    cursor: pointer;
+}
+
+#text > #title{
+    font-size: 4em;
+    margin-bottom: 5vh;
+    color: #cda45e;
+}
+
+#text > #info{
+    font-size: 1.4em;
+    width: 50vw;
+    margin-bottom: 8vh;
+}
