@@ -8,19 +8,60 @@
     <meta name="author" content="Francisco Solé">
     <meta name="description" content="Mi portafolio como desarrollador backend">
     <link rel="stylesheet" href="../css/core.css">
-    <link rel="stylesheet" href="../css/developing.css">
+    <link rel="stylesheet" href="../css/info.css">
     <title>Francisco Solé - Sobre mí</title>
 </head>
 <body>
-    <h1>Aún en proceso de diseño y desarrollo...</h1>
-    
-<!--     <div id="space"></div>
-    <div id="group">
-        <div id="myPhoto">
-            <!-- <img src="../img/me.png"> 
-        </div>
-        <div id="text">Backend developer</div>
-    </div> -->
-    
+    <nav class="clearfix">
+        <div id="name"><a href="../documents/CV - Solé Francisco.pdf" download="">Descargar CV</a></div>
+        <div id="item"><a href="contact.html">Contacto</a></div>
+        <div id="item"><a href="info.html" class="active">Sobre mí</a></div>
+        <div id="item"><a href="proyects.html">Proyectos</a></div>
+        <div id="item"><a href="../index.html">Inicio</a></div>
+    </nav>
+   <main>
+        <section id="start">
+            <div id="whos">
+                <div id="title">¿Quién es Francisco Solé?</div>
+                <div id="arrow" onclick="moveSlide('start', 'working')">< presione para continuar ></div>
+            </div>
+            <div id="photo"><img src="../img/me.webp"></div>
+        </section>
+        <section id="working">
+            <div id="text">
+                <div id="title">Laboralmente</div>
+                <div id="info">
+                    En mi día a día laboral, me destaco por ser una persona eficaz, responsable y puntual. Siempre doy lo mejor de mí en cada proyecto, asegurándome de que las tareas se completen de manera eficiente y a tiempo. Esto gracias a mi dedicación y pasión por enfrentar los desafíos con una actitud resoluta, buscando siempre la mejor solución. Mi compromiso con el trabajo y mi capacidad para encontrar soluciones rápidas y efectivas me han permitido superar diversas situaciones además de contribuir tanto positivamente como significativamente en el equipo donde trabajo.
+
+                    <br><br>En mi trabajo actual para PwC Argentina, he mejorado y creado código de una plataforma crítica de facturación a nivel internacional, utilizada por más de 1000 clientes externos y un equipo de gerentes. Mi enfoque se ha centrado en la calidad, sostenibilidad, legibilidad y velocidad del código. Siempre busco optimizar y refactorizar para que el código no solo cumpla con su propósito, sino que también sea fácil de mantener y entender por otros desarrolladores. Mi objetivo es garantizar que las soluciones sean robustas y eficientes a largo plazo, beneficiando tanto al equipo como a nuestros clientes.</div>
+            </div>
+            <div id="arrow" onclick="moveSlide('working', 'student')">< presione para continuar ></div>
+        </section>
+        <section id="student">
+            <div id="text">
+                <div id="title">Académicamente</div>
+                <div id="info">
+                    Mi trayectoria académica refleja mi pasión y compromiso con la tecnología y el desarrollo de software. Inicialmente, comencé mis estudios en la Licenciatura en Gestión de Tecnología de la Información en UADE y, aunque actualmente esta carrera está en pausa momentáneamente, sigo enfocado en mi desarrollo académico y profesional.
+
+                    <br><br>Actualmente, estoy inscrito en la Tecnicatura Universitaria en Desarrollo de Software en UADE, donde continúo fortaleciendo mis habilidades técnicas y prácticas en programación y desarrollo de software. Mi dedicación y motivación en los estudios son inquebrantables. Una vez completada la Tecnicatura, tengo la intención de continuar con la Ingeniería Informática para profundizar mi perfil técnico. Posteriormente, retomaré la Licenciatura para finalizar las materias restantes y así tener una formación integral y completa en el campo.
+
+                    <br><br>Estoy convencido de que esta formación integral me permitirá contribuir de manera significativa al campo de la tecnología, combinando conocimientos avanzados de programación y desarrollo con una visión práctica y estratégica.
+                </div>
+            </div>
+            <div id="arrow" onclick="moveSlide('student', 'me')">< presione para continuar ></div>
+        </section>
+        <section id="me">
+            <div id="text">
+                <div id="title">Personalmente</div>
+                <div id="info">
+                    Como persona, me percibo a mí mismo como respetuoso hacia los demás, dedicado a todo lo que hago y con una actitud proactiva en cada situación. Me esfuerzo por ser considerado y atento en mis relaciones interpersonales, siempre buscando maneras de apoyar y colaborar de manera efectiva. Además, me caracterizo por ser conciso y sincero, lo que me permite comunicarme de manera clara y honesta, fomentando relaciones transparentes y confiables. Mi dedicación se refleja tanto en mis compromisos personales como profesionales, y mi proactividad me impulsa a anticipar problemas y buscar soluciones innovadoras.
+
+                    <br><br>Además, soy un amante de la música y de los animales. La música es una gran fuente de inspiración y alegría para mí, y disfruto explorando diferentes géneros y estilos. Mi amor por los animales se manifiesta en mi respeto y cuidado por ellos, valorando su compañía y el impacto positivo que tienen en mi vida. Estas pasiones no solo enriquecen mi vida, sino que también me ayudan a mantener un equilibrio saludable y una perspectiva positiva.
+                </div>
+            </div>
+            <div id="arrow" onclick="moveSlide('me', 'start')">< presione para continuar ></div>
+        </section>
+   </main>
 </body>
+<script src="../scripts/info.js"></script>
 </html>
