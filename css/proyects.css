@@ -1,40 +1,4 @@
 /* Proyects */
-
-nav{
-    position: relative;
-    background-color: black;
-}
-
-nav > #name, #item{
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-}
-
-nav > #name{
-    float: left;
-    margin-left: 20px;
-}
-
-nav > #item{
-    float: right;
-    margin-right: 20px;
-}
-
-a:hover, .active{
-    color: #cda45e;
-}
-
-main{
-    display: grid;
-}
-
-.clearfix::after { 
-    content: " ";
-    display: block; 
-    height: 0; 
-    clear: both;
-}
-
 #university{
     background-image: url("../img/uade.webp"); /* Original image: https://www.uade.edu.ar/media/l2bjw5hp/frente-monserrat-noche.jpg?center=0.64200207002948817,0.49796876344469887&mode=crop&width=1900&height=580&rnd=133483364545500000 */
 }

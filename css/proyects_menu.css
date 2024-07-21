@@ -127,7 +127,7 @@
     z-index: -1;
 }
 
-#marketProyect, #studentProyect, #fourInARowProyect, #pizzaShopProyect, #mtaServerProyect, #portfolioProyect, #html5Icon{
+#marketProyect, #studentProyect, #fourInARowProyect, #pizzaShopProyect, #mtaServerProyect, #portfolioProyect{
     background-size: cover;
     box-shadow: -5px 10px 10px #000;
     border-radius: 0.5vw;
@@ -157,7 +157,7 @@
     background-image: url("../img/four.webp"); 
 } 
 
-#html5, #css, #python, #oop{
+#html5, #css, #python, #oop, #bootstrap{
     height: 5.5vh;
 }
 
@@ -177,4 +177,8 @@
 #oop{
     -webkit-filter: invert(100%);
     filter: invert(100%);
+}
+
+#bootstrap{
+    margin-left: .3vw;
 }
