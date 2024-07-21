@@ -14,7 +14,7 @@ function hideElements(){
         }
 
     } catch(e){
-        throw new Error(`[${e} in proyects.hideElements()]`);
+        throw new Error(`[${e}] in proyects.hideElements()`);
     }
 }
 
@@ -27,7 +27,7 @@ function changeDisplay(element, value){
     try{
         element.style.display = value;
     } catch(e){
-        throw new Error(`[${e} in proyects.changeDisplay()]`);
+        throw new Error(`[${e}] in proyects.changeDisplay()`);
     }
 }
 
@@ -57,7 +57,7 @@ function openSectionProyects(clickedSection, secondSection){
 
         showSectionProyects(clickedSection);
     } catch(e){
-        throw new Error(`[${e} in proyects.openSectionProyects()]`);
+        throw new Error(`[${e}] in proyects.openSectionProyects()`);
     }
 }
 
@@ -81,7 +81,7 @@ function showSectionProyects(section){
         changeDisplay(openSection, "block");
         changeDisplay(closeSection, "none");
     } catch(e){
-        throw new Error(`[${e} in proyects.showSectionProyects()]`);
+        throw new Error(`[${e}] in proyects.showSectionProyects()`);
     }
 }
 
@@ -105,7 +105,7 @@ function closeSectionProyects(targetSection, targetSection2){
             }, 1000);
         }, 1100);
     } catch(e){
-        throw new Error(`[${e} in proyects.openSectionProyects()]`);
+        throw new Error(`[${e}] in proyects.openSectionProyects()`);
     }
 }
 
@@ -129,7 +129,7 @@ function checkAnimation(targetAnimation, section, section2){
             setAnimation(goBack, "moveInBackArrow", "3s", false);
         }
     } catch(e){
-        throw new Error(`[${e} in proyects.checkAnimation()]`);
+        throw new Error(`[${e}] in proyects.checkAnimation()`);
     }
 }
 
@@ -147,7 +147,7 @@ function setAnimation(sectionElement, keyframe, time="3s", relativePosition=true
 
         sectionElement.style.animation = `${keyframe} ease ${time} 1 forwards`;
     } catch(e){
-        throw new Error(`[${e} in proyects.setAnimation()]`);
+        throw new Error(`[${e}] in proyects.setAnimation()`);
     }
 }
 
@@ -173,7 +173,7 @@ function showHideProyectSkills(proyectElement){
             }, 200);
         }
     } catch(e){
-        throw new Error(`[${e} in proyects.showHideProyectSkills()]`);
+        throw new Error(`[${e}] in proyects.showHideProyectSkills()`);
     }
 }
 
@@ -186,6 +186,6 @@ function isHidden(proyectElement){
     try{
         return (proyectElement.style.display == "none");
     } catch(e){
-        throw new Error(`[${e} in proyects.isHidden()]`);
+        throw new Error(`[${e}] in proyects.isHidden()`);
     }
 }
