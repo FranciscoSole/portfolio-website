@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="desarrollador, Desarrollador, backend, BackEnd, back end, Back end, Python, Javascript, SQL, NoSQL, POO, Java, Francisco Sole, Francisco Solé, portfolio, portafolio">
+    <meta name="author" content="Francisco Solé">
+    <meta name="description" content="Mi portafolio como desarrollador backend">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/projects_categories.css">
+    <link rel="stylesheet" href="../css/projects.css">
+
+    <title>Francisco Solé - Proyectos</title>
+</head>
+<body> 
+    <nav class="clearfix">
+        <div id="name"><a href="../documents/CV - Solé Francisco.pdf" download="">Descargar CV</a></div>
+        <div id="item"><a href="contact.html">Contacto</a></div>
+        <div id="item"><a href="info.html">Sobre mí</a></div>
+        <div id="item"><a href="projects.html" class="active">Proyectos</a></div>
+        <div id="item"><a href="../index.html">Inicio</a></div>
+    </nav>
+    <main>
+        <section class="category" id="university_section" onclick="openSectionProjects(this)">
+            <div id="name">Facultad</div>
+            <div id="description">Realizados durante la cursada de distintas materias</div> 
+        </section>
+        <section class="category" id="hobby_section" onclick="openSectionProjects(this)">
+            <div id="name">Proyectos</div>
+            <div id="description">Proyectos personales realizados de forma autodidacta</div>
+        </section>
+        
+        <div id="goBack" onclick="closeSectionProjects('university_section', 'hobby_section')"></div>
+        <div id="university">
+            <div id="marketManagement" class="project" onmouseenter="showHideSkills(this)" onmouseleave="showHideSkills(this)" onclick="window.open('https://github.com/FranciscoSole/store-management', '_blank')">
+                <div class="name">Gestor de negocio</div>
+                <div class="skills">
+                    <img src="../img/java.svg" id="java" alt="Ícono de Java"> <!-- Original image: https://icons-for-free.com/java+original+wordmark-1324760550562670345/ -->
+                    <img src="../img/OOP.svg" id="oop" alt="Ícono de OOP"> <!-- Original image: https://commons.wikimedia.org/wiki/File:OOP.svg -->
+                </div>
+            </div>
+
+            <div id="studentsManagement" class="project" onmouseenter="showHideSkills(this)" onmouseleave="showHideSkills(this)" onclick="window.open('https://github.com/FranciscoSole/university-students-management', '_blank')">
+                <div class="name">Gestor de alumnos</div>
+                <div class="skills">
+                    <img src="../img/java.svg" id="java" alt="Ícono de Java"> <!-- Original image: https://icons-for-free.com/java+original+wordmark-1324760550562670345/ -->
+                </div>
+            </div>
+
+            <div id="fourInARow" class="project" onmouseenter="showHideSkills(this)" onmouseleave="showHideSkills(this)" onclick="window.open('https://github.com/FranciscoSole/four-in-a-row', '_blank')">
+                <div class="name">Cuatro en raya</div>
+                <div class="skills">
+                    <img src="../img/python.svg" id="python" alt="Ícono de Python"> <!-- Original image: https://icons-for-free.com/python-1331550892661227292/ -->
+                </div>
+            </div>
+
+            <div id="pizzaShop" class="project" onmouseenter="showHideSkills(this)" onmouseleave="showHideSkills(this)" onclick="window.open('https://github.com/FranciscoSole/pizza-store-website', '_blank')">
+                <div class="name">Pizzería UADE</div>
+                <div class="skills">
+                    <img src="../img/html5.svg" id="html5" alt="Ícono de HTML5"> <!-- Original image: https://www.iconfinder.com/icons/294678/html5_icon -->
+                    <img src="../img/css.svg" id="css" alt="Ícono de CSS"> <!-- Original image: https://www.iconfinder.com/icons/6725435/css_document_extension_file_file_format_file_type_format_icon -->
+                    <img src="../img/javascript.svg" id="javascript" alt="Ícono de Javascript"> <!-- Original image: https://icons-for-free.com/javascript+original-1324760550805182024/ -->
+                    <img src="../img/bootstrap.svg" id="bootstrap" alt="Ícono de bootstrap"> <!-- Original image: https://worldvectorlogo.com/logo/bootstrap-5-1 -->
+                </div>
+            </div>
+        </div>
+
+        <div id="hobby">
+            <div id="portfolio" class="project" onmouseenter="showHideSkills(this)" onmouseleave="showHideSkills(this)"  onclick="window.open('https://github.com/FranciscoSole/portfolio-website', '_blank')">
+                <div class="name">Portfolio</div>
+                <div class="skills">
+                    <img src="../img/html5.svg" id="html5" alt="Ícono de HTML5"> <!-- Original image: https://www.iconfinder.com/icons/294678/html5_icon -->
+                    <img src="../img/css.svg" id="css" alt="Ícono de CSS"> <!-- Original image: https://www.iconfinder.com/icons/6725435/css_document_extension_file_file_format_file_type_format_icon -->
+                    <img src="../img/javascript.svg" id="javascript" alt="Ícono de Javascript"> <!-- Original image: https://icons-for-free.com/javascript+original-1324760550805182024/ -->
+                </div>
+            </div>
+
+            <div id="mta" class="project" onmouseenter="showHideSkills(this)" onmouseleave="showHideSkills(this)" onclick="window.open('https://github.com/FranciscoSole/mta-server-hobby', '_blank')">
+                <div class="name">Servidor MTA:SA</div>
+                <div class="skills">
+                    <img src="../img/lua.svg" id="lua" alt="Ícono de LUA"> <!-- Original image: https://icons-for-free.com/vscode+icons+type+lua-1324451381341479433/ -->
+                    <img src="../img/mySql.svg" id="mySql" alt="Ícono de MySQL"> <!-- Original image: https://icons-for-free.com/mysql+original+wordmark-1324760553527083815/ -->
+                </div>
+            </div>
+        </div>
+        
+        <video autoplay muted loop id="projectVid">
+            <source src="../vids/project.mp4" type="video/mp4"> <!-- Original vid: https://elements.envato.com/es/nature-dark-golden-color-sunset-ocean-view-waterfl-FTV448W -->
+        </video>
+    </main>
+</body>
+<script src="../scripts/projects.js"></script>
+</html>

@@ -1,0 +1,59 @@
+/* projects_categories */
+.category{
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: 48vh;
+    transition: all 3s ease;
+    z-index: 5;
+}
+
+.category:hover {
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.category > #name {
+    color: #cda45e;
+    font-size: 6em;
+    font-weight: 100;
+}
+
+.category > #description {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+#university, #hobby{
+    width: 100%;
+    display: grid;
+    background-size: cover;
+    z-index: 3;
+    position: absolute;
+    place-self: center;
+    text-align: center;
+    align-items: center;
+    transition: 2s;
+    vertical-align: middle;  
+    top: 25vh;
+    width: 100%;
+    height: 50vh;
+}
+
+#goBack, #university, #hobby{
+    position: absolute;
+}
+
+#university_section{
+    background-image: url("../img/uade.webp"); /* Original image: https://www.uade.edu.ar/media/l2bjw5hp/frente-monserrat-noche.jpg?center=0.64200207002948817,0.49796876344469887&mode=crop&width=1900&height=580&rnd=133483364545500000 */
+}
+
+#hobby_section{
+    background-image: url("../img/hobby.webp"); /* Original image: https://www.freepik.com/free-photo/top-view-set-gadgets-purple-neon-light-pink_10584199.htm#fromView=search&page=2&position=13&uuid=259017ce-85f1-4a0b-81eb-4c8e8a82fc55 */
+}
