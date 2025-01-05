@@ -42,8 +42,6 @@ main{
     display: flex;
     place-items: center;
     place-self: center;
-    /* flex-wrap: wrap;  
-    text-align: center;  */
 }
 
 #text-container {
@@ -54,7 +52,7 @@ main{
 #start #title {
     font-size: 4em;
     color: #fff;
-    margin-bottom: 10px; /* Espaciado con el texto debajo */
+    margin-bottom: 10px; 
 }
 
 #start #arrow{
