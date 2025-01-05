@@ -1,0 +1,30 @@
+{   
+    
+    "working": {
+        "title": "Laboralmente",
+        "description": [
+            "En mi día a día laboral, me destaco por ser una persona eficaz, responsable y puntual. Siempre doy lo mejor de mí en cada proyecto, asegurándome de que las tareas se completen de manera eficiente y a tiempo. Esto gracias a mi dedicación y pasión por enfrentar los desafíos con una actitud resoluta, buscando siempre la mejor solución.",
+            "En PwC Argentina, mi anterior trabajo, he participado mejorando y creando código en entorno productivo de una plataforma crítica de facturación a nivel internacional, utilizada por más de 1.000 clientes externos y un equipo de gerentes. Mi rol se ha centrado en la mejora de la calidad, sostenibilidad, legibilidad y rendimiento del código enfocado en costos espaciales y temporales, así como también de la realización de automatizaciones y generación de documentación.",
+            "En Credencial Payments, mi trabajo actual, estuve a cargo de la migración de una plataforma crítica de notificaciones que realiza más de 1.000.000 de ejecuciones mensuales. Además, participo activamente en el desarrollo de web services en entornos productivos y elaboro documentación técnica detallada de cada servicio.",
+            "Mi compromiso con el trabajo y mi capacidad para encontrar soluciones rápidas y efectivas me han permitido superar diversas situaciones además de contribuir tanto positivamente como significativamente en el equipo donde trabajo. Siempre busco optimizar y refactorizar código para que no solo cumpla con su propósito, sino que también sea fácil de mantener y entender por otros desarrolladores.",
+            "Mi objetivo es garantizar que las soluciones sean robustas y eficientes a largo plazo, beneficiando tanto al equipo como a nuestros clientes."
+        ]
+    },
+    "student": {
+        "title": "Académicamente",
+        "description": [
+            "Inicialmente, comencé mis estudios en la Licenciatura en Gestión de Tecnología de la Información en UADE y, aunque actualmente esta carrera esté en pausa momentáneamente, sigo enfocado en mi desarrollo académico ya que estoy inscrito en la Tecnicatura Universitaria en Desarrollo de Software; donde continúo fortaleciendo mis habilidades técnicas y conocimientos teóricos sobre la programación y el desarrollo de software.",
+            "Mi dedicación y motivación en los estudios son inquebrantables; ya que continuaré con la Licenciatura para profundizar más conocimientos y, posteriormente, realizaré las materias restantes para la Ingeniería en Informática con la finalidad de tener una formación integral y completa en el campo.",
+            "Estoy convencido de que esta formación integral me permitirá contribuir de manera significativa al campo de la tecnología, combinando conocimientos avanzados de programación y desarrollo con una visión práctica y estratégica, reflejando mi pasión y compromiso con la tecnología y el desarrollo de software."
+
+        ]
+    },
+    "me": {
+        "title": "Personalmente",
+        "description": [
+            "Nací un 29 de febrero del 2000 en la ciudad Junín, provincia de Buenos Aires, soy de Racing y actualmente vivo en CABA. Soy un amante de la música, de los animales y de los videojuegos. La música es una gran fuente de inspiración y alegría para mí, y disfruto explorando diferentes géneros y estilos. Mi amor por los animales se manifiesta en mi respeto y cuidado por ellos, valorando su compañía y el impacto positivo que tienen en mi vida. Los videojuegos son otra de mis pasiones, ya que me ofrecen una forma de entretenimiento y desafío mental. Estas pasiones no solo enriquecen mi vida, sino que también me ayudan a mantener un equilibrio saludable y una perspectiva positiva.", 
+            "Como persona, me percibo a mí mismo como respetuoso, escuchador activo, dedicado a todo lo que hago y con actitud proactiva en cada situación. Me esfuerzo por ser considerado y atento en mis relaciones interpersonales, siempre buscando maneras de apoyar y colaborar de manera efectiva. Además, me caracterizo por ser conciso y sincero, lo que me permite comunicarme de manera clara y honesta, fomentando relaciones transparentes y confiables. También soy una persona serena, y es gracias a esto que puedo mantener la calma en situaciones de estrés y tomar decisiones con claridad.",
+            "Mi dedicación se refleja tanto en mis compromisos personales como profesionales, y mi proactividad me impulsa a anticipar problemas y buscar soluciones innovadoras."
+        ]
+    }
+}

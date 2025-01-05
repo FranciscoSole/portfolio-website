@@ -1,4 +1,74 @@
-window.onload = hideElements();
+window.onload = run;
+
+function run(){
+    try{
+        createInformation()
+            .then(() => { hideElements()})
+            .catch((e) => {throw new Error(e)})
+    } catch(e){
+        throw new Error(`[${e}] in projects.run()`);
+    }
+}
+
+/**
+ * Crea las informaciones dinamicamente
+ * @returns {Promise}
+ */
+function createInformation(){
+    return new Promise((resolve, reject) => {
+        try{
+            const main = document.getElementById("main")
+            fetch("../json/info.json")
+            .then((response) => response.json())
+            .then((information) => {
+                const information_keys = Object.keys(information);
+
+                for(let index = 0; index < information_keys.length; index++){
+                    const actual_slide = information_keys[index]
+                    const actual_information = information[actual_slide]
+                    
+                    let new_information_element = document.createElement("section");
+                    new_information_element.id = actual_slide;
+    
+                    let information_title_element = document.createElement("div");
+                    information_title_element.id = "title"
+                    information_title_element.textContent = actual_information["title"]
+                    new_information_element.appendChild(information_title_element)
+
+                    let information_description_element = document.createElement("div");
+                    information_description_element.id = "description"
+                    
+                    actual_information["description"].forEach((paragraph, index) => {
+                        const text = document.createElement("p");
+                        text.textContent = paragraph;
+                        information_description_element.appendChild(text);
+                    
+                        // Agregar <br><br> solo si no es el último párrafo
+                        if (index < actual_information["description"].length - 1) {
+                            const br = document.createElement('br')
+                            information_description_element.appendChild(br);
+                            information_description_element.appendChild(br);
+                        }
+
+                    });
+                    new_information_element.appendChild(information_description_element)
+                    
+                    let next_slide = (index + 1 < information_keys.length) ? information_keys[index + 1] : "start";
+                    let arrow_information__element = document.createElement("div");
+                    arrow_information__element.id = "arrow"
+                    arrow_information__element.textContent = "< presione para continuar >"
+                    arrow_information__element.onclick = function() {moveSlide(actual_slide, next_slide)};
+                    new_information_element.appendChild(arrow_information__element)
+
+                    main.appendChild(new_information_element)
+                }
+                resolve();
+            }).catch(reject)
+        } catch(e){
+            reject(`[${e}] in projects.createInformation()`);
+        }
+    });
+}
 
 /** Esconde todos los elementos hardcodeados al cargar la página
  */
@@ -7,7 +77,6 @@ function hideElements(){
         changeDisplay(document.getElementById("working"), "none");
         changeDisplay(document.getElementById("student"), "none");
         changeDisplay(document.getElementById("me"), "none");
-
     } catch(e){
         throw new Error(`[${e}] in info.hideElements()`);
     }

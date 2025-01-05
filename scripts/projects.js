@@ -62,7 +62,7 @@ function createProjects(){
             .then((response) => response.json())
             .then((categories) => {
     
-                fetch("../json/skills_images.json")
+                fetch("../json/project_skills_images.json")
                 .then((response) => response.json())
                 .then((skill_images) => {
                     const category_keys = Object.keys(categories);
