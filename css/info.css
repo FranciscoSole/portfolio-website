@@ -10,17 +10,17 @@
 
 @keyframes moveOutStart {
     0%{transform: translateX(0%);}
-    70%{transform: translateX(-115%);}
+    80%{transform: translateX(-155%);}
 }
 
 @keyframes moveInStart {
-    0%{transform: translateX(8%);} 
+    0%{transform: translateX(20%);} 
     70%{transform: translateX(0%);}
 }
 
 @keyframes moveOutClicked {
     0%{transform: translateX(0%);}
-    100%{transform: translateX(-250%);}
+    100%{transform: translateX(-230%);}
 }
 
 @keyframes moveInNext {
