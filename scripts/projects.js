@@ -1,6 +1,131 @@
-window.onload = hideElements;
+window.onload = run;
 
-/** Esconde todos los elementos hardcodeados al cargar la página */
+function run(){
+    try{
+        createCategories()
+            .then(() => { return createProjects()})
+            .then(() => { hideElements()})
+            .catch((e) => {throw new Error(e)})
+    } catch(e){
+        throw new Error(`[${e}] in projects.run()`);
+    }
+}
+/**
+ * Crea dinámicamente las categorias de la pagina
+ */
+function createCategories(){
+    return new Promise((resolve, reject) => {
+        try{
+            const main = document.getElementById("main")
+            fetch("../json/projects_categories.json")
+            .then((response) => response.json())
+            .then((categories) => {
+                const category_keys = Object.keys(categories);
+    
+                for(let category of category_keys){
+                    const actual_category = categories[category];
+
+                    let new_category_element = document.createElement("section");
+                    new_category_element.className = "category";
+                    new_category_element.id = category;
+                    new_category_element.onclick = function() {openSectionProjects(this)};
+    
+                    let category_name_element = document.createElement("div");
+                    category_name_element.id = "name"
+                    category_name_element.textContent = actual_category["name"]
+                    
+                    let category_description_element = document.createElement("div");
+                    category_description_element.id = "description"
+                    category_description_element.textContent = actual_category["description"]
+    
+                    new_category_element.appendChild(category_name_element)
+                    new_category_element.appendChild(category_description_element)
+                    main.appendChild(new_category_element)
+                }
+    
+                resolve();
+            }).catch(reject)
+        } catch(e){
+            reject(`[${e}] in projects.createCategories()`);
+        }
+    });
+}
+
+/**
+ * Crea dinámicamente los projectos de la pagina
+ */
+function createProjects(){
+    return new Promise((resolve, reject) => {
+        try{
+            const main = document.getElementById("main")
+            fetch("../json/projects.json")
+            .then((response) => response.json())
+            .then((categories) => {
+    
+                fetch("../json/skills_images.json")
+                .then((response) => response.json())
+                .then((skill_images) => {
+                    const category_keys = Object.keys(categories);
+    
+                    for(let category of category_keys){
+                        const actual_category = categories[category];
+                        const project_keys = Object.keys(actual_category);
+    
+                        let new_category_element = document.createElement("div");
+                        new_category_element.id = category;
+                        main.appendChild(new_category_element);
+                        
+                        for(let project of project_keys){
+                            const actual_project = actual_category[project];
+                            const project_id = project;
+                            const project_name = actual_project["name"];
+                            const project_skills = actual_project["skills"]
+                            const project_github = actual_project["github"];
+    
+                            let new_project_element = document.createElement("div");
+                            new_project_element.id = project_id;
+                            new_project_element.className = "project";
+                            new_project_element.onmouseenter = function() {showHideSkills(this);};
+                            new_project_element.onmouseleave = function() {showHideSkills(this);};
+                            new_project_element.onclick = function() {window.open(project_github, "_blank");};
+    
+                            let project_info_element = document.createElement("div");
+                            project_info_element.className = "name";
+                            project_info_element.textContent = project_name;
+                            new_project_element.appendChild(project_info_element);
+    
+                            let project_skills_element = document.createElement("div")
+                            project_skills_element.className = "skills"
+    
+                            for(let skill of project_skills){
+                                let skill_image = document.createElement("img")
+                                let skill_image_url = document.createComment(` Original image: ${skill_images[skill]} `);
+    
+                                skill_image.src =  `../img/${skill}.svg`
+                                skill_image.id = skill
+                                skill_image.alt = `Icono de ${skill}`
+                                project_skills_element.appendChild(skill_image_url);
+                                project_skills_element.appendChild(skill_image)
+                            }
+    
+                            new_project_element.appendChild(project_skills_element)
+                            new_category_element.appendChild(new_project_element) 
+                        }
+                    }
+
+                    resolve()
+                }).catch(reject);
+            }).catch(reject);
+
+        } catch(e){
+            reject(`[${e}] in projects.createProjects()`);
+        }
+    });
+}
+
+/** 
+ * Esconde todos los elementos hardcodeados al cargar la página 
+ * */
 function hideElements(){
     try{
         changeDisplay(document.getElementById("projectVid"), "none");
@@ -10,7 +135,6 @@ function hideElements(){
 
         const skills = document.getElementsByClassName("skills")
         const skillsArray = Array.from(skills)
-
         for(let projectSkills of skillsArray){
             changeDisplay(projectSkills, "none")
         }
@@ -34,33 +158,19 @@ function changeDisplay(element, value){
 
 /**
  * Desplaza las categorías hacia afuera de la pantalla con sentido <- y muestra el div con el texto "< Volver a las categorías".
- * @param {string} clickedSection = id de la sección o elemento a la que se le hizo click
- * @param {string} secondSection = id de la sección o elemento a la que no se le hizo click
- */
-
-function getSectionsObject(){
-    try{
-        return {
-            "university_section": "hobby_section",
-            "hobby_section": "university_section"
-        }
-    } catch(e){
-        throw new Error(`[${e}] in projects.getSectionsObject()`);
-    }
-}
-
-/**
- * Abre la categoria deseada y esconde la otra
  * @param {Element} clickedSection = la categoria presionada 
  */
 function openSectionProjects(clickedSection){
     try{
-        const backgroundVid = document.getElementById("projectVid");
-        changeDisplay(backgroundVid, "block");
-        
-        const sections = getSectionsObject()
-        const hideSection = document.getElementById(sections[clickedSection.id]);
-        checkAnimation("moveOut", clickedSection, hideSection);
+        const sections = document.getElementsByClassName("category")
+        const sections_array = Array.from(sections).filter(section => section.id !== clickedSection.id)
+
+        const sections_object = {
+            "sections_clicked": clickedSection,
+            "sections_in": sections_array,
+            "sections_out": ""
+        }
+        checkAnimation("moveOut", sections_object);
 
         const section_timer = {
             "university_section": 350,
@@ -79,6 +189,9 @@ function openSectionProjects(clickedSection){
             goBack.innerText = "<";
             changeDisplay(goBack, "flex");
         }, goBackTextDelay2);
+
+        const backgroundVid = document.getElementById("projectVid");
+        changeDisplay(backgroundVid, "block");
 
         showSectionProjects(clickedSection.id);
     } catch(e){
@@ -106,7 +219,6 @@ function showSectionProjects(section_name){
         
         const hideSectionProjects = hideCategorySection[section_name]
         const sectionToHide = document.getElementById(hideSectionProjects)
-        console.log(openSectionProjects)
 
         changeDisplay(openSectionProjects, "block");
         changeDisplay(sectionToHide, "none");
@@ -119,14 +231,19 @@ function showSectionProjects(section_name){
  * Reacomoda las categorías en pantalla y esconde div con el texto "< Volver a las categorías".
  * @param {string} targetSection = id de la sección o elemento a mover
  */
-function closeSectionProjects(targetSection, targetSection2){
+function closeSectionProjects(){
     try{
-        const section = document.getElementById(targetSection);
-        const section2 = document.getElementById(targetSection2);
         const goBack = document.getElementById("goBack");
-
-        checkAnimation("moveIn", section, section2);
-
+        
+        const sections = document.getElementsByClassName("category")
+        const sections_array = Array.from(sections)
+        const sections_object = {
+            "sections_clicked": "",
+            "sections_in": "",
+            "sections_out": sections_array
+        }
+        checkAnimation("moveIn", sections_object)
+        
         //se lee de adentro para afuera, primero va el 2do setTimeout()
         setTimeout(function(){ // Le establece como texto "<" a los 1.1 segundos para que quede más lindo cuando se desliza
             goBack.innerText = "<";
@@ -142,23 +259,35 @@ function closeSectionProjects(targetSection, targetSection2){
 
 /**
  * Determina que animaciones utilizar para los elementos recibidos.
- * @param {string} targetAnimation = puede ser "moveIn" o cualquier otro (preferentemente "moveOut" para legibilidad y escalabilidad a futuro)
- * @param {element} section = primer elemento a aplicar animación
- * @param {element} section2 = segundo elemento a aplicar la animación
+ * @param {string} animation = debe ser moveIn o moveOut exclusivamente
+ * @param {object} sections_object = objeto con las propiedades "sections_clicked", "sections_in", y "sections_out"
  */
-function checkAnimation(targetAnimation, section, section2){
+function checkAnimation(animation, sections_object){
     try{
         const goBack = document.getElementById("goBack");
+        let target_section = null
+        let target_animation = null
+        let arrow_animation = null
 
-        if(targetAnimation == "moveIn"){
-            setAnimation(section, "moveInSections");
-            setAnimation(section2, "moveInSections");
-            setAnimation(goBack, "moveOutBackArrow", "3s",false);
+        if(animation == "moveIn"){
+            target_section = sections_object["sections_out"]
+            target_animation = "moveInSections"
+            arrow_animation = "moveOutBackArrow"
         } else{
-            setAnimation(section, "moveOutClicked");
-            setAnimation(section2, "moveOutSecond");
-            setAnimation(goBack, "moveInBackArrow", "3s", false);
+            const sections_clicked = sections_object["sections_clicked"]
+            setAnimation(sections_clicked, "moveOutClicked");
+
+            target_section = sections_object["sections_in"]
+            target_animation = "moveOutSecond"
+            arrow_animation = "moveInBackArrow"
         }
+
+        for(let section of target_section){
+            setAnimation(section, target_animation);
+        }
+
+        setAnimation(goBack, arrow_animation, "3s", false);
+
     } catch(e){
         throw new Error(`[${e}] in projects.checkAnimation()`);
     }

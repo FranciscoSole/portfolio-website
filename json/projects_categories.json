@@ -1,0 +1,10 @@
+{
+    "university_section": {
+        "name": "Facultad",
+        "description": "Realizados durante la cursada de distintas materias"
+    },
+    "hobby_section": {
+        "name": "Proyectos",
+        "description": "Proyectos personales realizados de forma autodidacta"
+    }
+}

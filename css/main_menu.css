@@ -1,4 +1,39 @@
 /* Main menu */
+@media (max-width: 1200px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #item {
+        margin-top: 7vh;
+        margin-left: 2vh;
+        font-size: 1.45em!important; 
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1em;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #name {
+        margin-top: 4vh!important;
+    }
+    #item {
+        margin-top: 31vh!important;
+        margin-left: 2vh;
+        font-size: 2em!important; 
+    }
+}
+
 
 .mainText{
     z-index: 3;

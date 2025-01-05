@@ -1,0 +1,36 @@
+{
+    "university": {
+        "storeManagement": {
+            "name": "Gestor de negocio",
+            "skills": ["java", "oop"],
+            "github": "https://github.com/FranciscoSole/store-management"
+        },
+        "studentsManager": {
+            "name": "Gestor de alumnos",
+            "skills": ["java"],
+            "github": "https://github.com/FranciscoSole/university-students-manager"
+        },
+        "fourInARow": {
+            "name": "Cuatro en raya",
+            "skills": ["python"],
+            "github": "https://github.com/FranciscoSole/four-in-a-row"
+        },
+        "pizzaShop": {
+            "name": "Pizzería UADE",
+            "skills": ["html5", "css", "javascript", "bootstrap"],
+            "github": "https://github.com/FranciscoSole/pizza-store-website"
+        }
+    },
+    "hobby": {
+        "portfolio": {
+            "name": "Portafolio",
+            "skills": ["html5", "css", "javascript"],
+            "github": "https://github.com/FranciscoSole/portfolio-website"
+        },
+        "mta": {
+            "name": "Servidor MTA:SA",
+            "skills": ["lua", "mysql"],
+            "github": "https://github.com/FranciscoSole/mta-server-hobby"
+        }
+    }
+}
