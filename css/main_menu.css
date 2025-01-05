@@ -11,7 +11,7 @@
     #item {
         margin-top: 7vh;
         margin-left: 2vh;
-        font-size: 1.45em!important; 
+        font-size: 1.45em; 
     }
 }
 
@@ -25,12 +25,12 @@
     }
 
     #name {
-        margin-top: 4vh!important;
+        margin-top: 4vh;
     }
     #item {
-        margin-top: 31vh!important;
+        margin-top: 31vh;
         margin-left: 2vh;
-        font-size: 2em!important; 
+        font-size: 2em; 
     }
 }
 
@@ -62,5 +62,5 @@
 }
 
 .push{
-    padding-right: 100px!important;
+    padding-right: 100px;
 }

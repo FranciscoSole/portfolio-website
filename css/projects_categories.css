@@ -37,7 +37,7 @@
     }
 
     .category:hover{ 
-        font-size: 1em!important
+        font-size: 1em
     }
     #university, #hobby {
         display: block;

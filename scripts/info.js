@@ -29,6 +29,7 @@ function createInformation(){
                     
                     let new_information_element = document.createElement("section");
                     new_information_element.id = actual_slide;
+                    
     
                     let information_title_element = document.createElement("div");
                     information_title_element.id = "title"
