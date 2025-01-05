@@ -24,7 +24,7 @@
     "hobby": {
         "portfolio": {
             "name": "Portafolio",
-            "skills": ["html5", "css", "javascript"],
+            "skills": ["html5", "css", "javascript", "cloudflare"],
             "github": "https://github.com/FranciscoSole/portfolio-website"
         },
         "mta": {

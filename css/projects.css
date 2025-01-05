@@ -142,7 +142,7 @@
 }
 
 
-#html5, #css, #python, #oop, #bootstrap{
+#html5, #css, #python, #oop, #bootstrap, #cloudflare{
     height: 5.5vh;
 }
 
@@ -164,6 +164,6 @@
     filter: invert(100%);
 }
 
-#bootstrap{
-    margin-left: .3vw;
+#bootstrap, #cloudflare{
+    margin-left: .4vw;
 }
