@@ -11,7 +11,8 @@ function run(){
     }
 }
 /**
- * Crea dinámicamente las categorias de la pagina
+ * Crea dinámicamente las categorias de la pagina al cargarla
+ * @returns {Promise}
  */
 function createCategories(){
     return new Promise((resolve, reject) => {
@@ -52,7 +53,8 @@ function createCategories(){
 }
 
 /**
- * Crea dinámicamente los projectos de la pagina
+ * Crea dinámicamente los projectos de la pagina al cargar la pagina
+ * @returns {Promise}
  */
 function createProjects(){
     return new Promise((resolve, reject) => {
@@ -124,7 +126,7 @@ function createProjects(){
 }
 
 /** 
- * Esconde todos los elementos hardcodeados al cargar la página 
+ * Esconde todos los elementos al cargar la página 
  * */
 function hideElements(){
     try{
@@ -145,7 +147,7 @@ function hideElements(){
 
 /**
  * Cambia el estado del elemento que se le pase como parámetro.
- * @param {element} element = el elemento que se le pase (el objeto en sí, no un id!)
+ * @param {element} element = el elemento al que se le quiera cambiar el display
  * @param {string} value = nombre del valor a establecerle, ej "none"
  */
 function changeDisplay(element, value){
@@ -229,7 +231,6 @@ function showSectionProjects(section_name){
 
 /**
  * Reacomoda las categorías en pantalla y esconde div con el texto "< Volver a las categorías".
- * @param {string} targetSection = id de la sección o elemento a mover
  */
 function closeSectionProjects(){
     try{

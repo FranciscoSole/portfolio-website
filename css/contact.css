@@ -1,3 +1,146 @@
-main{
-    background-color: #2d2d30;
+/* Video de fondo */
+#contactVid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 96vh!important;
+}
+
+/* Contenedor principal */
+main {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: center; /* Centrado vertical */
+    height: 100vh;
+    position: relative;
+    height: 96vh!important;
+}
+
+/* Formulario de contacto */
+.contact-form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 10vw;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.input-group .text {
+    color: black;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 2vh;
+}
+
+/* Estilos del botón de envío */
+.submit-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #27AE60;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe el mismo ancho que los inputs */
+    margin-bottom: 2vh;
+    display: flex;               /* Asegura que el contenido del div sea flexible */
+    justify-content: center;     /* Centra el contenido horizontalmente */
+    align-items: center;         /* Centra el contenido verticalmente */
+}
+
+#linkedin{
+    background-color: #0e76a8;
+}
+
+#github{
+    background-color: #24292e;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    /* Ajusta la posición del formulario en pantallas más pequeñas */
+    .contact-form-container {
+        margin-left: 20vw;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    input, textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para dispositivos muy pequeños (como teléfonos) */
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-form-container {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input, textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
 }

@@ -3,15 +3,15 @@ window.onload = run;
 function run(){
     try{
         createInformation()
-            .then(() => { hideElements()})
-            .catch((e) => {throw new Error(e)})
+        .then(() => { hideElements()})
+        .catch((e) => {throw new Error(e)})
     } catch(e){
         throw new Error(`[${e}] in projects.run()`);
     }
 }
 
 /**
- * Crea las informaciones dinamicamente
+ * Crea las informaciones dinamicamente de la pagina
  * @returns {Promise}
  */
 function createInformation(){
@@ -71,7 +71,7 @@ function createInformation(){
     });
 }
 
-/** Esconde todos los elementos hardcodeados al cargar la página
+/** Esconde todos los elementos al cargar la página
  */
 function hideElements(){
     try{

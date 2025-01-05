@@ -8,10 +8,41 @@
     <meta name="author" content="Francisco Solé">
     <meta name="description" content="Mi portafolio como desarrollador backend">
     <link rel="stylesheet" href="../css/core.css">
-    <link rel="stylesheet" href="../css/developing.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <title>Francisco Solé - Contacto</title>
 </head>
 <body>
-    <h1>Aún en proceso de diseño y desarrollo...</h1>
+    <nav>
+        <div id="name"><a href="../documents/CV - Solé Francisco.pdf" download="">Descargar CV</a></div>
+        <div id="item"><a href="../index.html">Inicio</a></div>
+        <div id="item"><a href="projects.html">Proyectos</a></div>
+        <div id="item"><a href="info.html">Sobre mí</a></div>
+        <div id="item"><a href="contact.html" class="active">Contacto</a></div>
+    </nav>
+    <main id="main">
+        <div class="contact-form-container">
+            <h2>¡Charlemos!</h2>
+            <form id="contact-form" action="mailto:tuemail@dominio.com" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="message" class="text">Mensaje:</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+    
+                <button type="submit" class="submit-btn">Enviar mail</button>
+
+                <a href="https://www.linkedin.com/in/franciscosole/" target="_blank">
+                    <div class="submit-btn" id="linkedin">LinkedIn</div>
+                </a>
+
+                <a href="https://www.github.com/FranciscoSole" target="_blank">
+                    <div class="submit-btn" id="github">GitHub</div>
+                </a>
+            </form>
+        </div>
+        <video autoplay muted loop id="contactVid">
+            <source src="../vids/contact.webm" type="video/mp4">
+        </video>
+   </main>
 </body>
+<script src="../scripts/contact.js"></script>
 </html>
