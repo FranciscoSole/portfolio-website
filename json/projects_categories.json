@@ -4,7 +4,7 @@
         "description": "Realizados durante la cursada de distintas materias"
     },
     "hobby_section": {
-        "name": "Proyectos",
-        "description": "Proyectos personales realizados de forma autodidacta"
+        "name": "Personales",
+        "description": "Realizados de manera autodidacta por hobby"
     }
 }
