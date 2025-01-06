@@ -1,5 +1,25 @@
-# Portafolio
+# Porfolio / Portafolio
 
-Actual preview: https://franciscosole.github.io/portfolio-website/
+## Features / Funcionalidades
 
-It's not finished!
+### English
+- Mostly responsive on computers
+- Dynamically generates the projects and the information about me
+- Redirects to the repository of each selected project
+- Displays the technologies used in the selected project
+- Allows sending an email to me or go to my Linkedin with just a button
+
+### Español
+- Mostly responsive on computers
+- Dynamically generates the projects and the information on the "about me" page
+- Redirects to the repository of each selected project
+- Displays the technologies used in the selected project
+- Allows sending me an email or accessing my LinkedIn with just a button
+
+## Introduction / Introducción
+
+### English
+Created with love and pure pleasure, to showcase my projects and also share a bit about myself from a professional, academic, and personal perspective.
+
+### Español
+Creado con cariño y por puro placer, para demostrar mis proyectos y también contarles un poco sobre mí desde lo laboral, académico y personal.
