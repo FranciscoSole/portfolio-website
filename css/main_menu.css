@@ -1,66 +1,100 @@
 /* Main menu */
-@media (max-width: 1200px) {
-    body {
-        font-size: 1.5em;
-    }
-
-    #menu {
-        display: flex;
-    }
-
-    .item {
-        margin-top: 7vh;
-        margin-left: 2vh;
-        font-size: 1.45em; 
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 1em;
-    }
-
-    #menu {
-        display: flex;
-    }
-
-    #name {
-        margin-top: 4vh;
-    }
-    .item {
-        margin-top: 31vh;
-        margin-left: 2vh;
-        font-size: 2em; 
-    }
-}
-
-
-.mainText{
+.mainText {
     z-index: 3;
     animation: fadeInAnimation ease 1.8s;
 }
 
-.mainText > #name{
+.mainText > #name {
     font-weight: 120;
-    transform: rotate(-.575deg);
+    transform: rotate(-0.575deg);
 }
 
-#menu{
+#menu {
     display: flex;
+    justify-content: center;
     z-index: 4;
+    gap: 2rem; /* Espaciado horizontal por defecto */
 }
 
-.item{
+.item {
     font-weight: 135;
     font-size: 1.65em;
     margin-top: 28.5vh;
 }
 
-.item > a:hover, #name > a:hover{
+.item > a:hover, #name > a:hover {
     color: #cda45e;
     animation-fill-mode: ease 4s;
 }
 
-.push{
+.push {
     padding-right: 100px;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 1920px) {
+    #name {
+        font-size: 5em;
+        text-shadow: 0.075vw 1vw 1vw black;
+        margin-bottom: 10vh;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        gap: 2em;
+        height: 22vh;
+    }
+
+    .item {
+        font-size: 2em;
+        text-shadow: 0.075vw 1vw 1vw black; 
+    }
+
+    .item > a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .item {
+        font-size: 2.5em; 
+    }
+
+    .item > a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 780px) {
+    #name {
+        font-size: 6em;
+        margin-bottom: 5vh;
+    }
+
+    #menu {
+        flex-direction: column;
+        height: 32vh;
+    }
+
+    .item {
+        font-size: 3.5em;
+        margin-top: 0;     
+        font-weight: 500;
+    }
+
+    .item > a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #name {
+        font-size: 4em;
+    }
+
+    #menu {
+        height: 30vh;
+    }
 }
