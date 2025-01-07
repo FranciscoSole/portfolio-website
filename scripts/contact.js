@@ -10,3 +10,19 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     // Redirige al usuario a su cliente de correo predeterminado
     window.location.href = mailtoLink;
 });
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+    let nav = document.getElementsByTagName("nav")[0]
+
+    if (nav.style.flexDirection === "column") {
+        nav.style.flexDirection = "row";
+    } else {
+        nav.style.flexDirection = "column"; 
+    }
+
+    let navLinks = document.getElementsByClassName('item'); 
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].classList.toggle('active');
+    }
+});
+

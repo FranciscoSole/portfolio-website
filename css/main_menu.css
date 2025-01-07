@@ -8,7 +8,7 @@
         display: flex;
     }
 
-    #item {
+    .item {
         margin-top: 7vh;
         margin-left: 2vh;
         font-size: 1.45em; 
@@ -27,7 +27,7 @@
     #name {
         margin-top: 4vh;
     }
-    #item {
+    .item {
         margin-top: 31vh;
         margin-left: 2vh;
         font-size: 2em; 
@@ -50,13 +50,13 @@
     z-index: 4;
 }
 
-#item{
+.item{
     font-weight: 135;
     font-size: 1.65em;
     margin-top: 28.5vh;
 }
 
-#item > a:hover, #name > a:hover{
+.item > a:hover, #name > a:hover{
     color: #cda45e;
     animation-fill-mode: ease 4s;
 }

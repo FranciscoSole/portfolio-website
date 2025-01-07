@@ -24,19 +24,26 @@
 }
 
 @keyframes moveInNext {
-    0%{transform: translateX(50%);} 
+    0%{transform: translateX(30%);} 
     70%{transform: translateX(0%);}
 }
 
 main{
     background-color: #2d2d30;
-    width: 100%;
-    height: 95.5vh;
+    height: 100vh; /* Asegura que ocupe toda la pantalla del dispositivo */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina paddings */
 }
+
+#photo {
+    display: none; /* Ya está oculto para pantallas pequeñas */
+}
+
+
 
 #start, #working, #student, #me{
     display: flex;
@@ -90,96 +97,172 @@ main{
 
 
 @media(max-width: 1920px){
-    nav {
-        font-size: 1em;
+    main{
+        overflow: hidden; /* Evita desbordamientos */
     }
 
-    main{
-        height: 96vh;
+    section{
+        height: 100vh;
     }
 
     #photo{
         display: block;
     }
 
-    #arrow{
-        font-size: 1.5em;
-    }
-
-    #working > #description{
-        font-size: 1.25em;
-    }
-
     #title{
-        font-size: 4em;
+        margin-top: 2vh;
+        font-size: 3em;
     }
 
-}
-
-@media(max-width: 1500px){
     #description{
-        width: 70vw;
+        width: 50vw;
+    }
+
+    #description > p {
+        margin-bottom: 2vh;
+        font-size: .8em;
+
+    }
+
+    #working #description > p {
+        font-size: .85em;
+    }
+
+    #student #description > p {
+        font-size: 1em;
+    }
+
+    #me #description > p {
+        font-size: .9em;
+    }
+
+    #text-container > #title{
+        font-size: 3.8em;
+    }
+    #text-container > #arrow{
+        font-size: 2.3em;
+    }
+
+    nav {
+        font-size: 1em;
+    }
+
+    #menu-icon{
+        display: none;
     }
 }
 
 @media (max-width: 1200px) {
-    #photo{
-        display: none;
+    #title{
+        margin-top: 2vh;
+        font-size: 3em;
     }
 
     #description{
-        width: 90vw;
+        width: 70vw;
     }
 
     #description > p {
-        font-size: 1em;
-        margin-bottom: 2vh;
-    }
-
-    section > #arrow {
-        font-size: 2em;
-    }
-
-    #working{
-        font-size: .95em;
-    }
-    
-    #text-container > #title{
-        font-size: 3.8em;
-    }
-
-    #text-container > #arrow{
-        font-size: 2.3em;
+        font-size: .8em;
     }
 
     nav {
         font-size: 1.05em;
     }
 
+
 }
 
 @media (max-width: 768px) {
+    #photo{
+        display: none;
+    }
+    #title{
+        font-size: 2.5em;
+    }
+
+    #description{
+        width: 90vw;
+    }
     #description > p {
+        font-size: .9em;
+    }
+    
+    #working #description > p {
         font-size: .85em;
     }
 
-    section > #arrow {
-        font-size: 1.6em;
+    #student #description > p{
+        font-size: .95em;
     }
-    
-    #student, #me{
-        font-size: 1em;
+
+    #me #description > p {
+        font-size: .9em;
     }
 
     #text-container > #title{
+        font-size: 3em;
+    }
+    
+    #text-container > #arrow{
         font-size: 2em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menu-icon {
+        display: block; 
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .item {
+        display: none;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .item.active {
+        display: block; 
+    }
+
+} 
+
+@media (max-width: 480px) {
+    #title {
+        font-size: 2em;
+    }
+
+    #description {
+        margin-bottom: 2px;
+    }
+
+    #working #description > p {
+        font-size: .615em;
+    }
+
+    #student #description > p {
+        font-size: .8em;
+    }
+
+    #me #description > p {
+        font-size: .7em;
+    }
+
+    #arrow{
+        font-size: 1.3em;
+    }
+
+    #text-container > #title{
+        font-size: 1.8em;
     }
     
     #text-container > #arrow{
         font-size: 1.4em;
-    }
-
-    nav {
-        font-size: 1.3em;
     }
 }

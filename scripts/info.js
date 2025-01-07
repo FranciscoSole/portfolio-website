@@ -5,6 +5,21 @@ function run(){
         createInformation()
         .then(() => { hideElements()})
         .catch((e) => {throw new Error(e)})
+
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            let nav = document.getElementsByTagName("nav")[0]
+        
+            if (nav.style.flexDirection === "column") {
+                nav.style.flexDirection = "row";
+            } else {
+                nav.style.flexDirection = "column"; 
+            }
+        
+            let navLinks = document.getElementsByClassName('item'); 
+            for (let i = 0; i < navLinks.length; i++) {
+                navLinks[i].classList.toggle('active');
+            }
+        });
     } catch(e){
         throw new Error(`[${e}] in projects.run()`);
     }
@@ -30,7 +45,6 @@ function createInformation(){
                     let new_information_element = document.createElement("section");
                     new_information_element.id = actual_slide;
                     
-    
                     let information_title_element = document.createElement("div");
                     information_title_element.id = "title"
                     information_title_element.textContent = actual_information["title"]
@@ -45,11 +59,11 @@ function createInformation(){
                         information_description_element.appendChild(text);
                     
                         // Agregar <br><br> solo si no es el último párrafo
-                        if (index < actual_information["description"].length - 1) {
-                            const br = document.createElement('br')
-                            information_description_element.appendChild(br);
-                            information_description_element.appendChild(br);
-                        }
+                        // if (index < actual_information["description"].length - 1) {
+                        //     const br = document.createElement('br')
+                        //     information_description_element.appendChild(br);
+                        //     information_description_element.appendChild(br);
+                        // }
 
                     });
                     new_information_element.appendChild(information_description_element)

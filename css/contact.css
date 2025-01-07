@@ -93,32 +93,15 @@ textarea {
     background-color: #0056b3;
 }
 
-/* Diseño responsive */
-@media (max-width: 768px) {
-    /* Ajusta la posición del formulario en pantallas más pequeñas */
-    .contact-form-container {
-        margin-left: 20vw;
-        padding: 20px;
-    }
 
-    h2 {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    input, textarea {
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .submit-btn {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-@media (max-width: 480px) {
-    /* Para dispositivos muy pequeños (como teléfonos) */
+/* Diseño responsive */
+@media (max-width: 1200px) {
     main {
         flex-direction: column;
         justify-content: center;
@@ -126,21 +109,82 @@ textarea {
     }
 
     .contact-form-container {
-        width: 90%;
-        margin-left: 0;
-    }
-
-    h2 {
-        font-size: 18px;
+        width: 80vw;
+        padding: 20px;
+        margin-right: 5%;
+        margin-bottom: 30vh;
     }
 
     input, textarea {
-        font-size: 12px;
-        padding: 8px;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2.4em;
+        margin-bottom: 15px;
     }
 
     .submit-btn {
-        padding: 8px 12px;
-        font-size: 14px;
+        padding: 10px 15px;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajusta la posición del formulario en pantallas más pequeñas */
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-form-container {
+        width: 80vw;
+        padding: 20px;
+        margin-right: 10vw;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .submit-btn {
+        font-size: 1.3em;
+    }
+
+    .input-group .text{
+        font-size: 1em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menu-icon {
+        display: block; /* Muestra el icono hamburguesa en pantallas pequeñas */
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .item {
+        display: none; /* Oculta los elementos del menú por defecto */
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .item.active {
+        display: block; /* Muestra el elemento cuando tiene la clase active */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-container {
+        width: 90vw;
+        margin-right: 10vw;
+        margin-bottom: 0vh;
     }
 }

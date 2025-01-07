@@ -1,6 +1,6 @@
 /* Main */
 
-#loading, #aboutMe, #blind, #menu, #item, .mainText, video{
+#loading, #aboutMe, #blind, #menu, .item, .mainText, video{
     width: 100%;
 }
 
