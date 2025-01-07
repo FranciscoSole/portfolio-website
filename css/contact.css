@@ -84,7 +84,7 @@ textarea {
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: #1E824C;
 }
 
 #menu-icon {
@@ -196,7 +196,7 @@ textarea {
     .contact-form-container {
         width: 90vw;
         margin-bottom: 20vh;
-        margin-right: 10vw;
+        margin-left: 5vw;
         margin-top: 30vh;
     }
 }
