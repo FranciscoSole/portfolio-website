@@ -184,9 +184,15 @@
     } 
 } 
 
+@media (max-width: 1200px) {
+    .project {
+        width: 60vw;
+    }
+}
+
 @media (max-width: 768px) {
     .project {
         width: 90vw;
-        font-size: .8em;
+        font-size: .9em;
     } 
 } 
