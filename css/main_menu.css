@@ -33,18 +33,21 @@
 
 /* Ajuste responsivo */
 @media (max-width: 1920px) {
-    #name {
-        font-size: 5em;
+    #name{
         text-shadow: 0.075vw 1vw 1vw black;
-        margin-bottom: 10vh;
     }
 
+    .mainText #name {
+        font-size: 5em;
+        margin-bottom: 10vh;
+    }
+    
     #menu {
         display: flex;
         flex-direction: row;
         align-items: center; 
         gap: 2em;
-        height: 22vh;
+        height: 25vh;
     }
 
     .item {
@@ -68,7 +71,7 @@
 }
 
 @media (max-width: 780px) {
-    #name {
+    .mainText #name {
         font-size: 6em;
         margin-bottom: 5vh;
     }
@@ -90,11 +93,11 @@
 }
 
 @media (max-width: 480px) {
-    #name {
+    .mainText #name {
         font-size: 4em;
     }
 
     #menu {
-        height: 30vh;
+        height: 28vh;
     }
 }
