@@ -1,4 +1,3 @@
-/* Video de fondo */
 #contactVid {
     position: absolute;
     top: 0;
@@ -8,7 +7,6 @@
     height: 96vh!important;
 }
 
-/* Contenedor principal */
 main {
     display: flex;
     justify-content: flex-start; /* Alinea el contenido a la izquierda */
@@ -18,7 +16,6 @@ main {
     height: 96vh!important;
 }
 
-/* Formulario de contacto */
 .contact-form-container {
     background-color: white;
     border-radius: 8px;
@@ -29,14 +26,12 @@ main {
     margin-left: 10vw;
 }
 
-/* Título */
 h2 {
     text-align: center;
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
 }
-
 
 .input-group .text {
     color: black;
@@ -64,7 +59,6 @@ textarea {
     margin-bottom: 2vh;
 }
 
-/* Estilos del botón de envío */
 .submit-btn {
     padding: 12px 20px;
     font-size: 16px;
@@ -74,11 +68,11 @@ textarea {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%; /* Hace que el botón ocupe el mismo ancho que los inputs */
+    width: 100%;
     margin-bottom: 2vh;
-    display: flex;               /* Asegura que el contenido del div sea flexible */
-    justify-content: center;     /* Centra el contenido horizontalmente */
-    align-items: center;         /* Centra el contenido verticalmente */
+    display: flex;               
+    justify-content: center;     
+    align-items: center;     
 }
 
 #linkedin{
@@ -93,26 +87,34 @@ textarea {
     background-color: #0056b3;
 }
 
-
 #menu-icon {
     display: none;
     font-size: 30px;
     cursor: pointer;
 }
 
-/* Diseño responsive */
-@media (max-width: 1200px) {
-    main {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+@media (max-width: 1920px){
+    nav {
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
     }
 
+    #fancier{
+        flex: 1
+    }
+
+    #menu-icon {
+        display: none;
+    }
+}
+
+/* Diseño responsive */
+@media (max-width: 1200px) {
     .contact-form-container {
         width: 80vw;
         padding: 20px;
-        margin-right: 5%;
-        margin-bottom: 30vh;
+        margin-left: 5vw;
     }
 
     input, textarea {
@@ -129,20 +131,16 @@ textarea {
         padding: 10px 15px;
         font-size: 1.5em;
     }
+
+    nav{
+        font-size: 1.35em;
+    }
 }
 
 @media (max-width: 768px) {
-    /* Ajusta la posición del formulario en pantallas más pequeñas */
-    main {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     .contact-form-container {
-        width: 80vw;
-        padding: 20px;
-        margin-right: 10vw;
+        margin-left: 17vw;
+        margin-top: 20vh;
     }
 
     h2 {
@@ -164,27 +162,41 @@ textarea {
     }
 
     #menu-icon {
-        display: block; /* Muestra el icono hamburguesa en pantallas pequeñas */
+        display: block;
         font-size: 30px;
         cursor: pointer;
     }
 
     .item {
-        display: none; /* Oculta los elementos del menú por defecto */
+        display: none;
         padding: 15px;
-        width: 100%;
         text-align: center;
     }
 
     .item.active {
-        display: block; /* Muestra el elemento cuando tiene la clase active */
+        display: block; 
+    }
+
+    #fancier{
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+    }
+
+    #fancier #name{
+        place-self: center;
+    }
+
+    #fancier, .item{
+        font-size: 1.3em;
     }
 }
 
 @media (max-width: 480px) {
     .contact-form-container {
         width: 90vw;
+        margin-bottom: 20vh;
         margin-right: 10vw;
-        margin-bottom: 0vh;
+        margin-top: 30vh;
     }
 }

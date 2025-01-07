@@ -16,6 +16,7 @@ function run(){
         }
     );
 
+    
     document.getElementById('menu-icon').addEventListener('click', 
         function() {
             let nav = document.getElementsByTagName("nav")[0]
@@ -32,7 +33,6 @@ function run(){
             }
         }
     );
-}
-
+};
 
 

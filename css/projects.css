@@ -60,6 +60,15 @@
     }
 }
 
+#projectVid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+}
+
 .project {
     display: inline-table;
     object-fit: cover; 
@@ -101,14 +110,6 @@
     font-size: 1.15em;
     top: 10vh;
     z-index: 10;
-}
-
-#projectVid{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
 }
 
 #storeManagement, #studentsManager, #fourInARow, #pizzaShop, #mta, #portfolio{
@@ -167,3 +168,23 @@
 #bootstrap, #cloudflare{
     margin-left: .4vw;
 }
+
+@media (max-width: 1920px) {
+    #university, #hobby{
+        top: 0;
+        margin-top: 15vh;
+    }
+    .project {
+        width: 60vw;
+        height: 15vh;
+        font-size: 1em;
+        margin-bottom: 3vh;
+    } 
+} 
+
+@media (max-width: 768px) {
+    .project {
+        width: 90vw;
+        font-size: .8em;
+    } 
+} 

@@ -9,17 +9,30 @@ function run(){
 
         document.getElementById('menu-icon').addEventListener('click', function() {
             let nav = document.getElementsByTagName("nav")[0]
-        
+            let projects = document.getElementsByClassName("project")
+            let goBack = document.getElementById("goBack")
+
             if (nav.style.flexDirection === "column") {
                 nav.style.flexDirection = "row";
+                // for(let project of projects){
+                //     project.style.display = "grid"
+                // }
+                // goBack.style.display = "block"
             } else {
                 nav.style.flexDirection = "column"; 
+            //     for(let project of projects){
+            //         project.style.display = "none"
+            //     }
+
+            //     goBack.style.display = "none"
+
             }
         
             let navLinks = document.getElementsByClassName('item'); 
-            for (let i = 0; i < navLinks.length; i++) {
-                navLinks[i].classList.toggle('active');
+            for (let navLink of navLinks) {
+                navLink.classList.toggle('active');
             }
+
         });
     } catch(e){
         throw new Error(`[${e}] in projects.run()`);

@@ -1,115 +1,35 @@
 /* projects_categories */
-@media (max-width: 1920px) {
-    .project {
-        display: inline-table;
-        width: 35vw;
-        margin-right: 1.5vw;
-        height: 20vh;
-        margin-bottom: 4vh;
-        margin-right: 1.5vw;
-    }
-
-    .category #name {
-        font-size: 8em;
-    }
-
-    .category  #description {
-        font-size: 2em;
-    }
-
-    #university, #hobby {
-        grid-template-columns: 1fr;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2vw;
-        height: auto;
-    }
-
-    nav {
-        font-size: 1em;
-
-    }
+main {
+    display: block;
+    justify-content: center; /* Alinea el contenido a la izquierda */
+    align-items: center; /* Centrado vertical */
+    position: relative;
 }
-
-@media (max-width: 1200px) {
-    .category {
-        height: 96vh;
-        font-size: .8em;
-    }
-
-    .category:hover{ 
-        font-size: 1em
-    }
-    #university, #hobby {
-        display: block;
-        position: relative;
-    }
-
-    .project {
-        width: 90vw;
-        height: 15vh;
-        font-size: 0.8em;
-        margin-bottom: 3vh;
-    }
-
-    nav{
-        font-size: 1.35em;
-    }
-}
-
-@media (max-width: 768px) {
-    .category {
-        height: 96vh;
-        font-size: .75em;
-    }
-
-    #university, #hobby {
-        display: block;
-        position: relative;
-    }
-
-    .project {
-        width: 90vw;
-        height: 15vh;
-        font-size: 0.8em;
-        margin-bottom: 3vh;
-    }
-
-    nav{
-        font-size: 1.3em;
-        padding: 10px;
-        margin-right: 5px;
-    }
-}
-
 
 .category{
+    top: 0;
+    left: 0;
     position: relative;
     display: flex;
     flex-direction: column; 
     justify-content: center; 
-    align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
     width: auto;
-    height: 48vh;
     transition: all 3s ease;
     z-index: 5;
+    height: 50vh;
 }
 
-.category:hover {
-    cursor: pointer;
-    font-size: 1.25em;
-}
-
-.category > #name {
+.category #name {
     color: #cda45e;
     font-size: 6em;
     font-weight: 100;
 }
 
-.category > #description {
+.category #description {
     font-size: 1.5em;
     font-weight: 200;
 }
@@ -121,7 +41,6 @@
     gap: 1vw;
     background-size: cover;
     z-index: 3;
-    position: absolute;
     place-self: center;
     text-align: center;
     align-items: center;
@@ -134,7 +53,7 @@
 
 #goBack, #university, #hobby{
     position: absolute;
-}
+} 
 
 #university_section{
     background-image: url("../img/uade.webp"); /* Original image: https://www.uade.edu.ar/media/l2bjw5hp/frente-monserrat-noche.jpg?center=0.64200207002948817,0.49796876344469887&mode=crop&width=1900&height=580&rnd=133483364545500000 */
@@ -143,3 +62,117 @@
 #hobby_section{
     background-image: url("../img/hobby.webp"); /* Original image: https://www.freepik.com/free-photo/top-view-set-gadgets-purple-neon-light-pink_10584199.htm#fromView=search&page=2&position=13&uuid=259017ce-85f1-4a0b-81eb-4c8e8a82fc55 */
 }
+
+main #goBack{
+    top: 0;
+    margin-top: 4vh;
+}
+
+@media (max-width: 1920px) {
+    .category {
+        cursor: pointer;
+        display: flex;
+        height: 50vh;
+        font-size: 1em;
+    }
+    .category #name {
+        font-size: 5em;
+    }
+
+    .category  #description {
+        font-size: 2em;
+    }
+
+    nav {
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #fancier{
+        flex: 1
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .category {
+        height: 47.4vh;
+    }
+    main{
+        overflow: hidden; 
+    }
+    .category {
+        display: flex;
+        height: 47.4vh;
+        font-size: 1em;
+    }
+
+    .category:hover{ 
+        font-size: 1em
+    }
+
+    nav{
+        font-size: 1.35em;
+    }
+
+} 
+
+@media (max-width: 768px) {
+    .category{
+        font-size: .9em;
+        height: 46.5vh;
+    }
+    .category:hover{ 
+        font-size: .9em
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .item {
+        display: none;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .item.active {
+        display: block; 
+    }
+
+    #fancier{
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+    }
+
+    #fancier #name{
+        place-self: center;
+    }
+
+    #fancier, .item{
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .category{ 
+        font-size: .8em
+    }
+    .category:hover{ 
+        font-size: .8em
+    }
+} 

@@ -125,7 +125,7 @@ main{
     }
 
     #working #description > p {
-        font-size: .85em;
+        font-size: .8em;
     }
 
     #student #description > p {
@@ -145,6 +145,12 @@ main{
 
     nav {
         font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #fancier{
+        flex: 1
     }
 
     #menu-icon{
@@ -164,6 +170,10 @@ main{
 
     #description > p {
         font-size: .8em;
+    }
+
+    #working #description > p {
+        font-size: .85em;
     }
 
     nav {
@@ -215,7 +225,7 @@ main{
     }
 
     #menu-icon {
-        display: block; 
+        display: block;
         font-size: 30px;
         cursor: pointer;
     }
@@ -223,12 +233,25 @@ main{
     .item {
         display: none;
         padding: 15px;
-        width: 100%;
         text-align: center;
     }
 
     .item.active {
         display: block; 
+    }
+
+    #fancier{
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+    }
+
+    #fancier #name{
+        place-self: center;
+    }
+
+    #fancier, .item{
+        font-size: 1.3em;
     }
 
 } 
