@@ -70,6 +70,41 @@ main #goBack{
     font-weight: 100;
 }
 
+@media (min-width: 1921px) {
+    .category {
+        cursor: pointer;
+        display: flex;
+        height: 50vh;
+        font-size: 1em;
+    }
+    .category #name {
+        font-size: 5em;
+    }
+
+    .category  #description {
+        font-size: 2em;
+    }
+
+    nav {
+        font-size: 1.5em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #fancier{
+        flex: 1
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+    #main > #goBack{
+        font-size: 3em;
+    }
+
+}
+
 @media (max-width: 1920px) {
     .category {
         cursor: pointer;
@@ -180,5 +215,31 @@ main #goBack{
     }
     .category:hover{ 
         font-size: .8em
+    }
+} 
+
+@media (max-width: 375px) {
+    .category{ 
+        font-size: .7em
+    }
+    .category:hover{ 
+        font-size: .7em
+    }
+
+    .category #description{
+        font-size: 2.1em;
+    }
+} 
+
+@media (max-width: 320px) {
+    .category{ 
+        font-size: .65em
+    }
+    .category:hover{ 
+        font-size: .65em
+    }
+
+    .category #description{
+        font-size: 2em;
     }
 } 

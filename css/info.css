@@ -96,6 +96,56 @@ main{
 }
 
 
+@media(min-width: 1921px){
+
+    main{
+        overflow: hidden; /* Evita desbordamientos */
+    }
+    #description{
+        width: 50vw;
+    }
+
+    #description > p {
+        margin-bottom: 2vh;
+        font-size: .8em;
+    }
+
+    #working #description > p {
+        font-size: 1.5em;
+    }
+
+    #student #description > p {
+        font-size: 1.7em;
+    }
+
+
+    #me #description > p {
+        font-size: 1.6em;
+    }
+
+    #arrow{
+        font-size: 3.5em;
+    }
+
+    nav {
+        font-size: 1.5em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #fancier{
+        flex: 1
+    }
+
+    #menu-icon{
+        display: none;
+    }
+    #photo{
+        display: block;
+    }
+}
+
+
 @media(max-width: 1920px){
     main{
         overflow: hidden; /* Evita desbordamientos */
@@ -121,7 +171,6 @@ main{
     #description > p {
         margin-bottom: 2vh;
         font-size: .8em;
-
     }
 
     #working #description > p {
@@ -287,5 +336,64 @@ main{
     
     #text-container > #arrow{
         font-size: 1.4em;
+    }
+}
+
+
+@media (max-width: 425px) {
+    #text-container #title {
+        font-size: 1.8em;
+    }
+
+    #text-container #arrow{
+        font-size: 1.3em;
+    }
+
+    #working #description > p {
+        font-size: .62em;
+    }
+
+    #student #description > p {
+        font-size: .8em;
+    }
+
+    #me #description > p {
+        font-size: .7em;
+    }
+}
+
+@media (max-width: 375px) {
+    #text-container #title {
+        font-size: 1.7em;
+    }
+
+    #working #description > p {
+        font-size: .6em;
+    }
+
+    #student #description > p {
+        font-size: .77em;
+    }
+
+    #me #description > p {
+        font-size: .65em;
+    }
+}
+
+@media (max-width: 320px) {
+    #text-container #title {
+        font-size: 1.5em;
+    }
+
+    #working #description > p {
+        font-size: .55em;
+    }
+
+    #student #description > p {
+        font-size: .71em;
+    }
+
+    #me #description > p {
+        font-size: .62em;
     }
 }

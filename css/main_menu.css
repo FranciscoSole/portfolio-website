@@ -32,14 +32,29 @@
 }
 
 /* Ajuste responsivo */
-@media (max-width: 1920px) {
-    #name{
+@media (min-width: 1921px){
+    .mainText #name {
+        font-size: 10em;
         text-shadow: 0.075vw 1vw 1vw black;
     }
 
+    .item {
+        font-size: 4em;
+        text-shadow: 0.075vw 1vw 1vw black; 
+    }
+
+    .loadingText #name {
+        font-size: 10em;
+    }
+    .loadingText #position {
+        font-size: 4em;
+    }
+}
+@media (max-width: 1920px) {
     .mainText #name {
         font-size: 5em;
         margin-bottom: 10vh;
+        text-shadow: 0.075vw 1vw 1vw black;
     }
     
     #menu {
@@ -72,7 +87,7 @@
 
 @media (max-width: 780px) {
     .mainText #name {
-        font-size: 6em;
+        font-size: 5em;
         margin-bottom: 5vh;
     }
 
@@ -90,6 +105,13 @@
     .item > a {
         text-align: center;
     }
+
+    .loadingText #name {
+        font-size: 4em;
+    }
+    .loadingText #position {
+        font-size: 1.8em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -99,5 +121,51 @@
 
     #menu {
         height: 28vh;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .mainText #name {
+        font-size: 3.3em;
+    }
+
+    .item {
+        font-size: 2.25em;
+        font-weight: 400;
+    }
+
+    .loadingText #name {
+        font-size: 3em;
+    }
+    .loadingText #position {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 375px) {
+    .mainText #name {
+        font-size: 3em;
+    }
+
+    .loadingText #name {
+        font-size: 2.7em;
+    }
+    .loadingText #position {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 320px) {
+    .mainText #name {
+        font-size: 2.5em;
+    }
+
+    .item {
+        font-size: 2.5em;
+    }
+
+    .loadingText #name {
+        font-size: 2.25em;
     }
 }

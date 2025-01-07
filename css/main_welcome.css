@@ -39,3 +39,91 @@
 #position{
     font-size: 2em;
 }
+
+@media (max-width: 1920px) {
+    #name{
+        text-shadow: 0.075vw 1vw 1vw black;
+    }
+
+    .mainText #name {
+        font-size: 5em;
+        margin-bottom: 10vh;
+    }
+    
+    #menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        gap: 2em;
+        height: 25vh;
+    }
+
+    .item {
+        font-size: 2em;
+        text-shadow: 0.075vw 1vw 1vw black; 
+    }
+
+    .item > a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .item {
+        font-size: 2.5em; 
+    }
+
+    .item > a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 780px) {
+    .mainText #name {
+        font-size: 6em;
+        margin-bottom: 5vh;
+    }
+
+    #menu {
+        flex-direction: column;
+        height: 32vh;
+    }
+
+    .item {
+        font-size: 3.5em;
+        margin-top: 0;     
+        font-weight: 500;
+    }
+
+    .item > a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .loadingText #name {
+        font-size: 2em;
+    }
+
+    .loadingText #position {
+        font-size: 1em;
+    }
+
+    #menu {
+        height: 28vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .loadingText #name {
+        font-size: 2em;
+    }
+
+    .loadingText #position {
+        font-size: 1em;
+    }
+
+    #menu {
+        height: 28vh;
+    }
+}
