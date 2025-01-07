@@ -6,6 +6,21 @@ function run(){
             .then(() => { return createProjects()})
             .then(() => { hideElements()})
             .catch((e) => {throw new Error(e)})
+
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            let nav = document.getElementsByTagName("nav")[0]
+        
+            if (nav.style.flexDirection === "column") {
+                nav.style.flexDirection = "row";
+            } else {
+                nav.style.flexDirection = "column"; 
+            }
+        
+            let navLinks = document.getElementsByClassName('item'); 
+            for (let i = 0; i < navLinks.length; i++) {
+                navLinks[i].classList.toggle('active');
+            }
+        });
     } catch(e){
         throw new Error(`[${e}] in projects.run()`);
     }
