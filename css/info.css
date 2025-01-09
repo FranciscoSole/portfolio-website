@@ -354,10 +354,10 @@ main{
     }
 
     #student #description {
-        height: 90vh;
+        margin-bottom: 4vh;
     }
     #student #description > p {
-        font-size: .9em;
+        font-size: 1em;
     }
 
     #me #description > p {
