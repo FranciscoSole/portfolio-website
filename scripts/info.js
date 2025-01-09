@@ -16,8 +16,8 @@ function run(){
             }
         
             let navLinks = document.getElementsByClassName('item'); 
-            for (let i = 0; i < navLinks.length; i++) {
-                navLinks[i].classList.toggle('active');
+            for (let navLink of navLinks) {
+                navLink.classList.toggle('activeHamburger');
             }
         });
     } catch(e){

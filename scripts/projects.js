@@ -9,8 +9,6 @@ function run(){
 
         document.getElementById('menu-icon').addEventListener('click', function() {
             let nav = document.getElementsByTagName("nav")[0]
-            let projects = document.getElementsByClassName("project")
-            let goBack = document.getElementById("goBack")
 
             if (nav.style.flexDirection === "column") {
                 nav.style.flexDirection = "row";
@@ -20,7 +18,7 @@ function run(){
         
             let navLinks = document.getElementsByClassName('item'); 
             for (let navLink of navLinks) {
-                navLink.classList.toggle('active');
+                navLink.classList.toggle('activeHamburger');
             }
 
         });

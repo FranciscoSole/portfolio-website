@@ -111,10 +111,10 @@ main #goBack{
         display: flex;
         height: 50vh;
         font-size: 1em;
-        color:#cda45e;
     }
     .category #name {
         font-size: 5em;
+        color:#cda45e;
     }
 
     .category  #description {
@@ -194,7 +194,7 @@ main #goBack{
         text-align: center;
     }
 
-    .item.active {
+    .item.activeHamburger {
         display: block; 
     }
 

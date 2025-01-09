@@ -325,7 +325,7 @@ main{
         text-align: center;
     }
 
-    .item.active {
+    .item.activeHamburger {
         display: block; 
     }
 
