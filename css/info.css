@@ -353,6 +353,9 @@ main{
         font-size: .9em;
     }
 
+    #studnet #description {
+        height: 60vh;
+    }
     #student #description > p {
         font-size: .9em;
     }
