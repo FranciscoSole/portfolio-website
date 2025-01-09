@@ -345,6 +345,10 @@ main{
 } 
 
 @media (max-width: 480px) {
+    #working #title, #student #title, #me #title{
+        font-size: 1.8em;
+    }
+
     #working #description > p {
         font-size: .9em;
     }
@@ -390,10 +394,6 @@ main{
         font-size: 1.3em;
     }
 
-    #working #title, #student #title, #me #title{
-        font-size: 1.8em;
-    }
-    
     #working #description > p {
         font-size: .9em;
     }
