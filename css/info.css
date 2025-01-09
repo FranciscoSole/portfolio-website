@@ -391,7 +391,7 @@ main{
     }
 
     #working #title, #student #title, #me #title{
-        font-size: 2em;
+        font-size: 1.8em;
     }
     
     #working #description > p {
