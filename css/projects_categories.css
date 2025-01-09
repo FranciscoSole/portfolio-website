@@ -111,6 +111,7 @@ main #goBack{
         display: flex;
         height: 50vh;
         font-size: 1em;
+        color:#cda45e;
     }
     .category #name {
         font-size: 5em;

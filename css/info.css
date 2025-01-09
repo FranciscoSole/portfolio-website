@@ -429,6 +429,10 @@ main{
     #working #description > p {
         font-size: .8em;
     }
+    
+    #student #title{
+        font-size: 1.8em;
+    }
     #student #description > p {
         font-size: .8em;
     }

@@ -184,6 +184,9 @@
 } 
 
 @media (max-width: 1920px) {
+    .project #name{
+        color: #cda45e;
+    }
     #university, #hobby{
         top: 0;
         margin-top: 15vh;
