@@ -97,12 +97,28 @@ main{
 
 
 @media(min-width: 1921px){
-
     main{
         overflow: hidden; /* Evita desbordamientos */
     }
+
+    #text-container #title{
+        font-size: 5em;
+    }
+    #text-container #arrow{
+        font-size: 3em;
+    }
+    
     #description{
         width: 50vw;
+        height: 80vh;  /* Add a height to make overflow work */
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        margin-bottom: 1vh;
+    }
+
+    #description::-webkit-scrollbar {
+        width: 0;  /* O 1px si quieres hacerla muy delgada */
+        height: 0; /* Para el desplazamiento horizontal, si es necesario */
     }
 
     #description > p {
@@ -111,20 +127,19 @@ main{
     }
 
     #working #description > p {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 
     #student #description > p {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
-
 
     #me #description > p {
         font-size: 1.6em;
     }
 
     #arrow{
-        font-size: 3.5em;
+        font-size: 2.5em;   
     }
 
     nav {
@@ -161,11 +176,20 @@ main{
 
     #title{
         margin-top: 2vh;
-        font-size: 3em;
+        font-size: 3.2em;
     }
 
     #description{
         width: 50vw;
+        height: 80vh;  /* Add a height to make overflow work */
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        margin-bottom: 1vh;
+    }
+
+    #description::-webkit-scrollbar {
+        width: 0;  /* O 1px si quieres hacerla muy delgada */
+        height: 0; /* Para el desplazamiento horizontal, si es necesario */
     }
 
     #description > p {
@@ -174,7 +198,11 @@ main{
     }
 
     #working #description > p {
-        font-size: .8em;
+        font-size: 1em;
+    }
+
+    #student #description{
+        height: 70vh;
     }
 
     #student #description > p {
@@ -182,14 +210,14 @@ main{
     }
 
     #me #description > p {
-        font-size: .9em;
+        font-size: 1em;
     }
 
     #text-container > #title{
         font-size: 3.8em;
     }
-    #text-container > #arrow{
-        font-size: 2.3em;
+    #arrow{
+        font-size: 2em;
     }
 
     nav {
@@ -208,55 +236,67 @@ main{
 }
 
 @media (max-width: 1200px) {
-    #title{
+    #text-container > #title{
         margin-top: 2vh;
-        font-size: 3em;
+        font-size: 2.4em;
+    }
+
+    #text-container > #arrow{
+        font-size: 1.8em;
     }
 
     #description{
-        width: 70vw;
-    }
-
-    #description > p {
-        font-size: .8em;
+        width: 90vw;
     }
 
     #working #description > p {
-        font-size: .85em;
+        font-size: 1em;
+    }
+
+    #arrow{
+        font-size: 1.8em;
+    }
+
+    #student #description{
+        height: 80vh;
+        margin-bottom: 0;
+    }
+
+    #student #description > p {
+        font-size: 1.2em;
+    }
+
+    #me #description > p {
+        font-size: 1.1em;
     }
 
     nav {
         font-size: 1.05em;
     }
-
-
 }
 
 @media (max-width: 768px) {
     #photo{
         display: none;
     }
-    #title{
-        font-size: 2.5em;
-    }
 
     #description{
-        width: 90vw;
+        margin-bottom: 0vh;
     }
     #description > p {
         font-size: .9em;
     }
     
     #working #description > p {
-        font-size: .85em;
+        font-size: 1em;
     }
 
     #student #description > p{
-        font-size: .95em;
+        font-size: 1em;
     }
 
     #me #description > p {
-        font-size: .9em;
+        font-size: 1em;
     }
 
     #text-container > #title{
@@ -302,28 +342,19 @@ main{
     #fancier, .item{
         font-size: 1.3em;
     }
-
 } 
 
 @media (max-width: 480px) {
-    #title {
-        font-size: 2em;
-    }
-
-    #description {
-        margin-bottom: 2px;
-    }
-
     #working #description > p {
-        font-size: .615em;
+        font-size: .9em;
     }
 
     #student #description > p {
-        font-size: .8em;
+        font-size: .9em;
     }
 
     #me #description > p {
-        font-size: .7em;
+        font-size: .9em;
     }
 
     #arrow{
@@ -337,6 +368,16 @@ main{
     #text-container > #arrow{
         font-size: 1.4em;
     }
+
+    #description {
+        height: 80vh;
+        width: 90vw;
+        margin-bottom: 1vh;
+    }
+
+    #student #description {
+        height: 65vh;
+    }
 }
 
 
@@ -349,16 +390,24 @@ main{
         font-size: 1.3em;
     }
 
+    #working #title, #student #title, #me #title{
+        font-size: 2em;
+    }
+    
     #working #description > p {
-        font-size: .62em;
+        font-size: .9em;
     }
 
     #student #description > p {
-        font-size: .8em;
+        font-size: .9em;
     }
 
     #me #description > p {
-        font-size: .7em;
+        font-size: .9em;
+    } 
+
+    #student #description {
+        height: 85vh;
     }
 }
 
@@ -367,16 +416,8 @@ main{
         font-size: 1.7em;
     }
 
-    #working #description > p {
-        font-size: .6em;
-    }
-
-    #student #description > p {
-        font-size: .77em;
-    }
-
-    #me #description > p {
-        font-size: .65em;
+    #description{
+        width: 80vw;
     }
 }
 
@@ -386,14 +427,13 @@ main{
     }
 
     #working #description > p {
-        font-size: .55em;
+        font-size: .8em;
     }
-
     #student #description > p {
-        font-size: .71em;
+        font-size: .8em;
     }
 
     #me #description > p {
-        font-size: .62em;
+        font-size: .8em;
     }
 }

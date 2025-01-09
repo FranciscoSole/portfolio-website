@@ -14,18 +14,8 @@ function run(){
 
             if (nav.style.flexDirection === "column") {
                 nav.style.flexDirection = "row";
-                // for(let project of projects){
-                //     project.style.display = "grid"
-                // }
-                // goBack.style.display = "block"
             } else {
                 nav.style.flexDirection = "column"; 
-            //     for(let project of projects){
-            //         project.style.display = "none"
-            //     }
-
-            //     goBack.style.display = "none"
-
             }
         
             let navLinks = document.getElementsByClassName('item'); 

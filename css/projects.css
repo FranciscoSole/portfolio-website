@@ -199,12 +199,31 @@
 } 
 
 @media (max-width: 1200px) {
+    #university, #hobby{
+        height: 80vh;  /* Add a height to make overflow work */
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+
+    #university::-webkit-scrollbar, #hobby::-webkit-scrollbar {
+        width: 0;  /* O 1px si quieres hacerla muy delgada */
+        height: 0; /* Para el desplazamiento horizontal, si es necesario */
+    } 
+
     .project {
         width: 60vw;
     }
 }
 
 @media (max-width: 768px) {
+    #university, #hobby{
+        height: 80vh;  /* Add a height to make overflow work */
+    }
+
+    .project .name{
+        font-size: 1.8em;
+    }
+
     .project {
         width: 90vw;
         font-size: .9em;

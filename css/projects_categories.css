@@ -75,7 +75,7 @@ main #goBack{
         cursor: pointer;
         display: flex;
         height: 50vh;
-        font-size: 1em;
+        font-size: 1.7em;
     }
     .category #name {
         font-size: 5em;
@@ -86,7 +86,7 @@ main #goBack{
     }
 
     nav {
-        font-size: 1.5em;
+        font-size: 1.7em;
         display: flex;
         justify-content: space-between;
     }
@@ -137,9 +137,6 @@ main #goBack{
 }
 
 @media (max-width: 1200px) {
-    .category {
-        height: 47.4vh;
-    }
     main{
         overflow: hidden; 
     }
@@ -147,12 +144,17 @@ main #goBack{
         display: flex;
         height: 47.4vh;
         font-size: 1em;
+        overflow-y: scroll;
     }
 
     .category:hover{ 
         font-size: 1em
     }
 
+    .category::-webkit-scrollbar {
+        width: 0;  /* O 1px si quieres hacerla muy delgada */
+        height: 0; /* Para el desplazamiento horizontal, si es necesario */
+    } 
     nav{
         font-size: 1.35em;
     }
@@ -162,6 +164,7 @@ main #goBack{
 @media (max-width: 768px) {
     main #goBack{
         font-weight: 200;
+        font-size: 1.3em;
     }
 
     .category{
@@ -211,10 +214,15 @@ main #goBack{
 
 @media (max-width: 480px) {
     .category{ 
-        font-size: .8em
+        font-size: .8em;
+        height: 47vh;
     }
     .category:hover{ 
         font-size: .8em
+    }
+
+    main #goBack{
+        font-weight: 400;
     }
 } 
 

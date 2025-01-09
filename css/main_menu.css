@@ -116,9 +116,15 @@
 
 @media (max-width: 480px) {
     .mainText #name {
-        font-size: 4em;
+        font-size: 3.7em;
     }
 
+    .loadingText #name {
+        font-size: 2.8em;
+    }
+    .loadingText #position {
+        font-size: 1.4em;
+    }
     #menu {
         height: 28vh;
     }
