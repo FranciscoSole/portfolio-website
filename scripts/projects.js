@@ -6,7 +6,7 @@ function run(){
             .then(() => { return createProjects()})
             .then(() => { hideElements()})
             .catch((e) => {throw new Error(e)})
-
+        
         document.getElementById('menu-icon').addEventListener('click', function() {
             let nav = document.getElementsByTagName("nav")[0]
 
@@ -103,8 +103,8 @@ function createProjects(){
                             let new_project_element = document.createElement("div");
                             new_project_element.id = project_id;
                             new_project_element.className = "project";
-                            new_project_element.onmouseenter = function() {showHideSkills(this);};
-                            new_project_element.onmouseleave = function() {showHideSkills(this);};
+                            new_project_element.onmouseenter = function() {showSkills(this);};
+                            new_project_element.onmouseleave = function() {hideSkills(this);};
                             new_project_element.onclick = function() {window.open(project_github, "_blank");};
     
                             let project_info_element = document.createElement("div");
@@ -329,29 +329,40 @@ function setAnimation(sectionElement, keyframe, time="3s", relativePosition=true
 }
 
 /**
- * Muestra o esconde los skills del proyecto dependiendo de que si se están mostrando o no 
+ * Muestra los skills del proyecto
  * @param {element} project = proyecto al que se le hace :hover
  */
-function showHideSkills(project){
+function showSkills(project){
     try{
         const skills = project.children[1]
         if(isHidden(skills)){
             changeDisplay(project, "inline-grid")
             changeDisplay(skills, "inline-table");
             setAnimation(skills, "showSkills", "0.5s");
-        } else{
-            changeDisplay(project, "inline-grid")
-            changeDisplay(skills, "inline-table");
-            setAnimation(skills, "moveDownName", "0.5s");
-            setAnimation(skills, "hideSkills", "0.5s");
-            
-            setTimeout(function(){ // Lo esconde pasados 200 milésimas de segundo
-                changeDisplay(skills, "none");
-            }, 200);
-        }
+        } 
     } catch(e){
         throw new Error(`[${e}] in projects.showHideSkills()`);
     }
+}
+/**
+ * Esconde los skills del proyecto
+ * @param {element} project = proyecto al que se le hace :hover
+ */
+function hideSkills(project){
+    try{
+        const skills = project.children[1]
+        changeDisplay(project, "inline-grid")
+        changeDisplay(skills, "inline-table");
+        setAnimation(skills, "moveDownName", "0.5s");
+        setAnimation(skills, "hideSkills", "0.5s");
+        
+        setTimeout(function(){ // Lo esconde pasados 200 milésimas de segundo
+            changeDisplay(skills, "none");
+        }, 200);
+    } catch(e){
+        throw new Error(`[${e}] in projects.showHideSkills()`);
+    }
+
 }
 
 /**
