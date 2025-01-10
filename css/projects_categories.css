@@ -74,7 +74,7 @@ main #goBack{
     .category {
         cursor: pointer;
         display: flex;
-        height: 50vh;
+        height: 48vh;
         font-size: 1.7em;
     }
     .category #name {
@@ -106,10 +106,13 @@ main #goBack{
 }
 
 @media (max-width: 1920px) {
+    main{
+        overflow: hidden; 
+    }
     .category {
         cursor: pointer;
         display: flex;
-        height: 50vh;
+        height: 48vh;
         font-size: 1em;
     }
     .category #name {
@@ -138,14 +141,9 @@ main #goBack{
 }
 
 @media (max-width: 1200px) {
-    main{
-        overflow: hidden; 
-    }
     .category {
-        display: flex;
-        height: 47.4vh;
+        height: 47.55vh;
         font-size: 1em;
-        overflow-y: scroll;
     }
 
     .category:hover{ 
