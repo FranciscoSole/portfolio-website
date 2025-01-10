@@ -14,11 +14,10 @@ function loadWelcome(){
                 sessionStorage.setItem("loadingVidLoaded", "true")
             });
         } else{
-            console.log("Skipping intro video")
             removeLoadingVid()
             aboutMe.style.display = "grid";
+            console.log("Skipping intro video")
         }
-
     } catch(e){
         throw new Error(`[${e}] in main.loadWelcome()`)
     }
