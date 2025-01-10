@@ -6,35 +6,32 @@ function loadWelcome(){
 
         const session = sessionStorage.getItem("loadingVidLoaded")
         if ((!session) || (session == "false")) {
+            let text = document.getElementsByClassName("loadingText")[0];
             console.log("Loading intro video")
-
-            let vid = document.getElementById("loadingVid");
-            vid.playbackRate = 2;
-            vid.play().then(() => {
-                vid.onended = function () {
-                    sessionStorage.setItem("loadingVidLoaded", "true");
-                    removeLoadingVid(aboutMe)
-                };
-            }).catch((error) => {
-                console.error("Error playing the video: ", error);
-                removeLoadingVid(aboutMe)
+            text.addEventListener('animationend', function() {
+                removeLoadingVid()
+                aboutMe.style.display = "grid";
+                sessionStorage.setItem("loadingVidLoaded", "true")
             });
         } else{
             console.log("Skipping intro video")
-            removeLoadingVid(aboutMe)
+            removeLoadingVid()
+            aboutMe.style.display = "grid";
         }
 
-        document.getElementById("mainVid").playbackRate = 0.75;
     } catch(e){
         throw new Error(`[${e}] in main.loadWelcome()`)
     }
 }
 
-function removeLoadingVid(aboutMe){
+function removeLoadingVid(){
     try{
-        document.getElementById("loading").remove();
-        document.getElementById("blind").remove();
-        aboutMe.style.display = "grid";
+        const video_items = ["loading", "blind"]
+        
+        for(let item of video_items){
+            const actual_item = document.getElementById(item)
+            actual_item.remove();
+        }
     } catch(e){
         throw new Error(`[${e}] in main.removeLoadingVid()`)
     }
