@@ -1,35 +1,54 @@
 /* Main loading page */
 
 @keyframes fadeInAnimation {
-    0%{opacity: 0; z-index: 0;}
-    40%{opacity: 0; z-index: 0;}
-    51%{z-index: 1;}
-    100%{opacity: 1;}
+    0% {
+        opacity: 0;
+        z-index: 0;
+    }
+    50% {
+        opacity: 1;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0.1;
+        z-index: -1;
+    }
 }
 
-@keyframes blindAnimation{
-    0%{top:-100vh;z-index: 2;}
-    80%{bottom: 100vh;}
-    100%{bottom: 0vh;}
+@keyframes blindAnimation {
+    0% {
+        z-index: 2;
+        top: -100vh; 
+    }
+    50% {
+        z-index: 2;
+        bottom: 100vh;
+    }
+    100% {
+        z-index: 2;
+        bottom: 0vh; 
+    }
 }
+
 
 #blind, .loadingText, .mainText{
     position: absolute;
 }
-
 .loadingText, .mainText{
     place-self: center;
     text-align: center;
 }
 
-#blind{
-    background-color: black;
-    animation: blindAnimation ease 10.85s 1;
-}
 
+#blind{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    animation: blindAnimation ease-out 5s 1;
+}
 .loadingText{
-    z-index: 1;
-    animation: fadeInAnimation ease 6s 2 alternate;
+    position: relative;
+    animation: fadeInAnimation ease 5s 1 alternate; 
 }
 
 #name{
@@ -79,20 +98,25 @@
 }
 
 @media (max-width: 780px) {
-    .mainText #name {
-        font-size: 6em;
+    #aboutMe > .mainText > #name {
+        font-size: 4em;
         margin-bottom: 5vh;
     }
 
+    #aboutMe > .mainText > #menu {
+        margin-top: 10vh;
+        height: 28vh;
+    }
     #menu {
         flex-direction: column;
         height: 32vh;
     }
 
-    .item {
-        font-size: 3.5em;
+    #aboutMe > .mainText > #menu > .item {
+        font-size: 3em;
         margin-top: 0;     
-        font-weight: 500;
+        font-weight: 400;
+        text-shadow: 0.075vw 1vw 1vw black; 
     }
 
     .item > a {
@@ -109,12 +133,13 @@
         font-size: 1em;
     }
 
-    #menu {
-        height: 28vh;
+    #aboutMe > .mainText > #name {
+        font-size: 3em;
     }
 }
 
-@media (max-width: 320px) {
+
+@media (max-width: 375px) {
     .loadingText #name {
         font-size: 2em;
     }
@@ -123,7 +148,16 @@
         font-size: 1em;
     }
 
-    #menu {
+    #aboutMe > .mainText > #menu {
         height: 28vh;
+    }
+
+    #aboutMe > .mainText > #name {
+        font-size: 2.5em;
+    }
+
+    
+    #aboutMe > .mainText > #menu > .item {
+        font-size: 2.5em;
     }
 }

@@ -1,7 +1,22 @@
 /* Main menu */
+
+@keyframes fadeInAnimationMenu {
+    0% {
+        opacity: 0;
+        z-index: 0;
+    }
+    30% {
+        opacity: 0;
+        z-index: 0;
+    }
+    100% {
+        opacity: 1;
+        z-index: 1;
+    }
+}
 .mainText {
     z-index: 3;
-    animation: fadeInAnimation ease 1.8s;
+    animation: fadeInAnimationMenu ease 2.25s 1 ;
 }
 
 .mainText > #name {
