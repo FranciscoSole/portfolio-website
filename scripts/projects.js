@@ -6,7 +6,7 @@ function run(){
             .then(() => { return createProjects()})
             .then(() => { hideElements()})
             .catch((e) => {throw new Error(e)})
-        
+
         document.getElementById('menu-icon').addEventListener('click', function() {
             let nav = document.getElementsByTagName("nav")[0]
 
@@ -335,11 +335,9 @@ function setAnimation(sectionElement, keyframe, time="3s", relativePosition=true
 function showSkills(project){
     try{
         const skills = project.children[1]
-        if(isHidden(skills)){
-            changeDisplay(project, "inline-grid")
-            changeDisplay(skills, "inline-table");
-            setAnimation(skills, "showSkills", "0.5s");
-        } 
+        changeDisplay(project, "inline-grid")
+        changeDisplay(skills, "inline-table");
+        setAnimation(skills, "showSkills", "0.5s");
     } catch(e){
         throw new Error(`[${e}] in projects.showHideSkills()`);
     }
@@ -363,17 +361,4 @@ function hideSkills(project){
         throw new Error(`[${e}] in projects.showHideSkills()`);
     }
 
-}
-
-/**
- * Valida que un elemento esté escondido
- * @param {element} element = el elemento a validar si está oculto
- * @returns {boolean} = devuelve true solamente si el display del elemento es none, caso contrario devuelve false
- */
-function isHidden(element){
-    try{
-        return (element.style.display == "none");
-    } catch(e){
-        throw new Error(`[${e}] in projects.isHidden()`);
-    }
 }
