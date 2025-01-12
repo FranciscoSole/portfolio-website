@@ -28,6 +28,11 @@
     70%{transform: translateX(0%);}
 }
 
+
+body{
+    overflow: hidden;
+}
+
 main{
     background-color: #2d2d30;
     height: 100vh; /* Asegura que ocupe toda la pantalla del dispositivo */
@@ -42,8 +47,6 @@ main{
 #photo {
     display: none; /* Ya está oculto para pantallas pequeñas */
 }
-
-
 
 #start, #working, #student, #me{
     display: flex;
