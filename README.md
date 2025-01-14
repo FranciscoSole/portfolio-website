@@ -3,18 +3,18 @@
 ## Features / Funcionalidades
 
 ### English
-- Mainly responsive on most devices
-- Dynamically generates the projects and the information about me
+- Responsive on most devices
+- Dynamically generates the projects, their categories and the information about me
 - Redirects to the repository of each selected project
-- Displays the technologies used in the selected project
+- Displays the technologies used in the selected project when hovering the mouse over it
 - Allows sending an email to me or go to my Linkedin with just a button
 - Connected with Cloudflare
 
 ### Español
-- Principalmente responsive en la mayoría de los dispositivos
-- Genera dinámicamente los proyectos y la información en la página "sobre mí"
+- Responsive en la mayoría de los dispositivos
+- Genera dinámicamente los proyectos, sus categorias y la información en la página "sobre mí"
 - Redirige al repositorio de cada proyecto seleccionado
-- Muestra las tecnologías utilizadas en el proyecto seleccionado
+- Muestra las tecnologías utilizadas en el proyecto seleccionado al poner el mouse por encima
 - Permite enviarme un correo electrónico o acceder a mi LinkedIn con solo un botón
 - Conectado con Cloudflare
 
