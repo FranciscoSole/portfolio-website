@@ -74,7 +74,7 @@ main #goBack{
     .category {
         cursor: pointer;
         display: flex;
-        height: 48vh;
+        height: 48.25vh;
         font-size: 1.7em;
     }
     .category #name {
@@ -112,7 +112,7 @@ main #goBack{
     .category {
         cursor: pointer;
         display: flex;
-        height: 48vh;
+        height: 48.25vh;
         font-size: 1em;
     }
     .category #name {
