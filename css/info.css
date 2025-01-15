@@ -195,7 +195,7 @@ main{
     }
 
     #working #description{
-        height: 67vh;
+        height: 75vh;
     }
     #working #description > p {
         font-size: 1.3em;
@@ -243,7 +243,7 @@ main{
     }
 
     #student #description{
-        height: 70vh;
+        height: 48vh;
     }
 
     #student #description > p {
@@ -312,9 +312,6 @@ main{
 
     #description{
         margin-bottom: 0vh;
-    }
-    #description > p {
-        font-size: .9em;
     }
     
     #working #description > p {
