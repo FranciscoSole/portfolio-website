@@ -288,6 +288,9 @@ main{
         width: 90vw;
     }
 
+    #working #description{
+        height: 70vh;
+    }
     #working #description > p {
         font-size: 1em;
     }
