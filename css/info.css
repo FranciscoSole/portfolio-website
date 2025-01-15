@@ -1,351 +1,201 @@
-/* Info */
-@keyframes pulse {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: .6;
-    }
-}
 
-@keyframes moveOutStart {
-    0%{transform: translateX(0%);}
-    80%{transform: translateX(-155%);}
+#contactVid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
 }
-
-@keyframes moveInStart {
-    0%{transform: translateX(20%);} 
-    70%{transform: translateX(0%);}
-}
-
-@keyframes moveOutClicked {
-    0%{transform: translateX(0%);}
-    100%{transform: translateX(-230%);}
-}
-
-@keyframes moveInNext {
-    0%{transform: translateX(30%);} 
-    70%{transform: translateX(0%);}
-}
-
 
 body{
     overflow: hidden;
 }
 
-main{
-    background-color: #2d2d30;
-    height: 100vh; /* Asegura que ocupe toda la pantalla del dispositivo */
+main {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center; /* Centra horizontalmente */
-    margin: 0; /* Elimina márgenes */
-    padding: 0; /* Elimina paddings */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: center; /* Centrado vertical */
+    height: 96vh;
+    position: relative;
 }
 
-#photo {
-    display: none; /* Ya está oculto para pantallas pequeñas */
+.contact-form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 10vw;
 }
 
-#start, #working, #student, #me{
-    display: flex;
-    place-items: center;
-    place-self: center;
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-#text-container {
-    display: flex;
-    flex-direction: column;
+.input-group .text {
+    color: black;
 }
 
-#start #title {
-    font-size: 4em;
-    color: #fff;
-    margin-bottom: 10px; 
+label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
 }
 
-#start #arrow{
-    display: flex;
-    place-self: center;
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-#start > #photo {
-    border-radius: 80vw;
-    mask-image: linear-gradient(black 95%, transparent);
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 2vh;
 }
 
-#arrow{
-    font-size: 1.6em;
-    animation: pulse ease 0.8s infinite alternate;
-    color: #cda45e;
-    text-shadow: 0.075vw 0.075vw 0.075vw #000;
+.submit-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #27AE60;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 2vh;
+    display: flex;               
+    justify-content: center;     
+    align-items: center;     
 }
 
-#arrow:hover{
+#linkedin{
+    background-color: #0e76a8;
+}
+
+#github{
+    background-color: #24292e;
+}
+
+.submit-btn:hover {
+    background-color: #1E824C;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 30px;
     cursor: pointer;
 }
 
-#title{
-    font-size: 4em;
-    margin-bottom: 2vh;
-    color: #cda45e;
-}
-
-#description{
-    font-size: 1.4em;
-    width: 50vw;
-    margin-bottom: 4vh;
-}
-
-
-@media(min-width: 2561px){
-    #text-container #title{
-        font-size: 3em;
+@media (min-width: 1921px){
+    nav {
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.8em;
     }
-    #text-container #arrow{
-        font-size: 2.5em;
+
+    #fancier{
+        flex: 1
+    }
+
+    #menu-icon {
+        display: none;
     }
     
-    #description{
-        max-width: 1300px;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-        margin-bottom: 1vh;
+    h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
     }
-
-    #description::-webkit-scrollbar {
-        width: 0;  /* O 1px si quieres hacerla muy delgada */
-        height: 0; /* Para el desplazamiento horizontal, si es necesario */
-    }
-
-    #description > p {
-        margin-bottom: 2vh;
-        font-size: .8em;
-    }
-
-    #working #description{
+    .contact-form-container {
         width: 50vw;
-        height: 75vh;
-        max-width: 1400px;
-    }
-    #working #description > p {
-        font-size: 1.45em;
+        padding: 20px;
+        margin-left: 15vw;
     }
 
-    #student #description{
-        width: 70vw;
-        height: 48vh;
-    }
-    #student #description > p {
-        font-size: 1.45em;
+    input, textarea {
+        font-size: 1.5em;
     }
 
-    #me #description{
-        width: 50vw;
-        height: 63vh;
+    .text{
+        font-size: 1.5em;
     }
-    #me #description > p {
-        font-size: 1.6em;
-    }
-
-    #arrow{
-        font-size: 2.5em;   
-    }
-
-    nav {
-        font-size: 1.3em;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #fancier{
-        flex: 1
-    }
-
-    #menu-icon{
-        display: none;
-    }
-    #photo{
-        display: block;
-    }
-}
-
-@media(max-width: 2560px){
-    main{
-        overflow: hidden;
-    }
-    #text-container #title{
-        font-size: 3em;
-    }
-    #text-container #arrow{
-        font-size: 2.5em;
-    }
-    #description{
-        width: 50vw;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-        margin-bottom: 1vh;
-    }
-
-    #description::-webkit-scrollbar {
-        width: 0;  /* O 1px si quieres hacerla muy delgada */
-        height: 0; /* Para el desplazamiento horizontal, si es necesario */
-    }
-
-    #description > p {
-        margin-bottom: 2vh;
-        font-size: .8em;
-    }
-
-    #working #description{
-        height: 75vh;
-    }
-    #working #description > p {
-        font-size: 1.3em;
-    }
-
-    #student #description{
-        height: 48vh;
-    }
-    #student #description > p {
-        font-size: 1.3em;
-    }
-
-    #me #description{
-        width: 50vw;
-        height: 63vh;
-    }
-    #me #description > p {
-        font-size: 1.3em;
-    }
-
-    #arrow{
-        font-size: 2.5em;   
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #fancier{
-        flex: 1
-    }
-
-    #menu-icon{
-        display: none;
-    }
-    #photo{
-        display: block;
-    }
-}
-
-
-@media(max-width: 1920px){
-    #working #description, #student #description, #me #description{
-        height: 70vh;
-        width: 80vw;
-    }
-
-    #working #description > p {
-        font-size: 1em;
-    }
-
-    #student #description > p {
-        font-size: 1em;
-    }
-
-    #me #description > p {
-        font-size: 1em;
-    }
-
-    #text-container > #title{
-        font-size: 3.8em;
-    }
-
-    #arrow{
+    .submit-btn {
+        padding: 10px 15px;
         font-size: 2em;
     }
-
 }
 
+@media (max-width: 1920px){
+    nav {
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #fancier{
+        flex: 1
+    }
+
+    #menu-icon {
+        display: none;
+    }
+}
+
+/* Diseño responsive */
 @media (max-width: 1200px) {
-    #working #description, #student #description, #me #description{
-        height: 60vh;
-        width: 60vw;
-    }
-    #text-container > #title{
-        margin-top: 2vh;
-        font-size: 2.4em;
+    main {
+        justify-content: center;
+        align-items: center;
     }
 
-    #text-container > #arrow{
-        font-size: 1.8em;
+    .contact-form-container {
+        width: 80vw;
+        padding: 20px;
+        margin-left: 0vw;
     }
 
-    #description{
-        width: 90vw;
-    }
-
-    #working #description > p {
+    input, textarea {
+        padding: 10px;
         font-size: 1em;
     }
 
-    #arrow{
-        font-size: 1.8em;
+    h2 {
+        font-size: 2.4em;
+        margin-bottom: 15px;
     }
 
-    #student #description > p {
-        font-size: 1.2em;
+    .submit-btn {
+        padding: 10px 15px;
+        font-size: 1.5em;
     }
 
-    #me #description > p {
-        font-size: 1.1em;
-    }
-
-    nav {
-        font-size: 1.05em;
+    nav{
+        font-size: 1.35em;
     }
 }
 
 @media (max-width: 768px) {
-    #start > #text-container > #title{
-        font-size: 2.5em;
-    }
-    #working #description, #student #description, #me #description{
-        height: 60vh;
-        width: 90vw;
-    }
-    #photo{
-        display: none;
-    }
-
-    #description{
-        margin-bottom: 0vh;
-    }
-    #description > p {
-        font-size: .9em;
-    }
-    
-    #working #description > p {
-        font-size: 1em;
-    }
-
-    #student #description > p{
-        font-size: 1em;
-    }
-
-    #me #description > p {
-        font-size: 1em;
-    }
-
-    #text-container > #title{
-        font-size: 3em;
-    }
-    
-    #text-container > #arrow{
+    h2 {
         font-size: 2em;
+    }
+
+    .submit-btn {
+        font-size: 1.3em;
+    }
+
+    .input-group .text{
+        font-size: 1em;
     }
 
     nav {
@@ -383,79 +233,10 @@ main{
     #fancier, .item{
         font-size: 1.3em;
     }
-} 
+}
 
 @media (max-width: 480px) {
-    #working #title, #student #title, #me #title{
-        font-size: 3em;
-    }
-
-    #working #description > p {
-        font-size: 1.2em;
-    }
-
-    #student #description {
-        margin-bottom: 4vh;
-    }
-    #student #description > p {
-        font-size: 1.2em;
-    }
-
-    #me #description > p {
-        font-size: 1.2em;
-    }
-
-    #arrow{
-        font-size: 1.8em;
-    }
-
-    #text-container > #title{
-        font-size: 1.8em;
-    }
-    
-    #text-container > #arrow{
-        font-size: 1.4em;
-    }
-
-    #description {
-        height: 80vh;
+    .contact-form-container {
         width: 90vw;
-        margin-bottom: 1vh;
-    }
-
-}
-
-
-@media (max-width: 425px) {
-    #working #description > p {
-        font-size: 2em;
-    }
-
-    #student #description > p {
-        font-size: .9em;
-    }
-
-    #me #description > p {
-        font-size: .9em;
-    } 
-
-}
-
-@media (max-width: 375px) {
-    #description{
-        width: 80vw;
-    }
-}
-
-@media (max-width: 320px) {
-    #student #title{
-        font-size: 1.8em;
-    }
-    #student #description > p {
-        font-size: .8em;
-    }
-
-    #me #description > p {
-        font-size: .8em;
     }
 }
