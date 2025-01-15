@@ -21,6 +21,11 @@ video {
     object-fit: fill;
 }
 
+
+body{
+    overflow: hidden; /* Evita desbordamientos */
+}
+
 nav {
     display: flex;
     justify-content: space-between;
