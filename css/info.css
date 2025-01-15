@@ -446,10 +446,6 @@ main{
     #me #description > p {
         font-size: .9em;
     } 
-
-    #student #description {
-        height: 85vh;
-    }
 }
 
 @media (max-width: 375px) {
