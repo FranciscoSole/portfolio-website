@@ -252,6 +252,7 @@ main{
 
     #student #description{
         height: 70vh;
+        width: 80vw;
     }
 
     #student #description > p {
