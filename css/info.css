@@ -126,7 +126,7 @@ main{
 
     #working #description{
         width: 50vw;
-        height: 72vh;
+        height: 76vh;
         max-width: 1400px;
     }
     #working #description > p {
@@ -135,7 +135,7 @@ main{
 
     #student #description{
         width: 70vw;
-        height: 45vh;
+        height: 35vh;
     }
     #student #description > p {
         font-size: 1.45em;
@@ -143,7 +143,7 @@ main{
 
     #me #description{
         width: 50vw;
-        height: 74vh;
+        height: 60vh;
     }
     #me #description > p {
         font-size: 1.6em;
@@ -196,21 +196,22 @@ main{
     }
 
     #working #description{
-        height: 67vh;
+        height: 72vh;
     }
     #working #description > p {
         font-size: 1.3em;
     }
 
     #student #description{
-        height: 42vh;
+        height: 35vh;
     }
     #student #description > p {
         font-size: 1.3em;
     }
 
     #me #description{
-        height: 55vh;
+        width: 50vw;
+        height: 60vh;
     }
     #me #description > p {
         font-size: 1.3em;
