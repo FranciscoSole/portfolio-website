@@ -300,16 +300,18 @@ main{
     }
 
     #student #description{
-        height: 60vh;
-        margin-bottom: 0;
+        height: 40vh;
     }
 
     #student #description > p {
         font-size: 1.2em;
     }
 
-    #me #description > p {
+    #me #description{
         height: 60vh;
+    }
+
+    #me #description > p {
         font-size: 1.1em;
     }
 
