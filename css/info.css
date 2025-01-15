@@ -111,6 +111,16 @@ main{
         font-size: 3em;
     }
     
+    nav {
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.8em;
+    }
+
+    #fancier{
+        flex: 1
+    }
     #description{
         max-width: 1300px;
         overflow-y: scroll;
@@ -130,7 +140,7 @@ main{
 
     #working #description{
         width: 50vw;
-        height: 72vh;
+        height: 71vh;
         max-width: 1400px;
     }
     #working #description > p {
@@ -139,7 +149,7 @@ main{
 
     #student #description{
         width: 70vw;
-        height: 45vh;
+        height: 48vh;
     }
     #student #description > p {
         font-size: 1.45em;
@@ -147,7 +157,7 @@ main{
 
     #me #description{
         width: 50vw;
-        height: 74vh;
+        height: 75vh;
     }
     #me #description > p {
         font-size: 1.6em;
@@ -218,12 +228,7 @@ main{
     #arrow{
         font-size: 2.5em;   
     }
-
-    nav .item{
-        display: flex;
-        justify-content: space-between;
-    }
-
+    
     #fancier{
         flex: 1
     }
