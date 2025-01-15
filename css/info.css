@@ -243,6 +243,9 @@ main{
 
 
 @media(max-width: 1920px){
+    #working #description{
+        height: 50vh;
+    }
     #working #description > p {
         font-size: 1em;
     }
