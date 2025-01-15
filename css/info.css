@@ -135,7 +135,7 @@ main{
 
     #student #description{
         width: 70vw;
-        height: 48vh!important;
+        height: 48vh;
     }
     #student #description > p {
         font-size: 1.45em;
@@ -206,7 +206,7 @@ main{
     }
 
     #student #description{
-        height: 48vh!important;
+        height: 48vh;
     }
     #student #description > p {
         font-size: 1.3em;
@@ -244,7 +244,8 @@ main{
 
 @media(max-width: 1920px){
     #working #description{
-        height: 50vh;
+        height: 70vh;
+        width: 80vw;
     }
     #working #description > p {
         font-size: 1em;
@@ -257,6 +258,11 @@ main{
 
     #student #description > p {
         font-size: 1em;
+    }
+
+    #me #description{
+        height: 70vh;
+        width: 80vw;
     }
 
     #me #description > p {
@@ -293,11 +299,6 @@ main{
 
     #arrow{
         font-size: 1.8em;
-    }
-
-    #student #description{
-        height: 80vh;
-        margin-bottom: 0;
     }
 
     #student #description > p {
@@ -420,9 +421,6 @@ main{
         margin-bottom: 1vh;
     }
 
-    #student #description {
-        height: 65vh;
-    }
 }
 
 
@@ -447,9 +445,6 @@ main{
         font-size: .9em;
     } 
 
-    #student #description {
-        height: 85vh;
-    }
 }
 
 @media (max-width: 375px) {
