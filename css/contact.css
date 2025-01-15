@@ -16,9 +16,8 @@ main {
     display: flex;
     justify-content: flex-start; /* Alinea el contenido a la izquierda */
     align-items: center; /* Centrado vertical */
-    height: 100vh;
+    height: 96vh;
     position: relative;
-    height: 96vh!important;
 }
 
 .contact-form-container {
@@ -155,10 +154,15 @@ textarea {
 
 /* Diseño responsive */
 @media (max-width: 1200px) {
+    main {
+        justify-content: center;
+        align-items: center;
+    }
+
     .contact-form-container {
         width: 80vw;
         padding: 20px;
-        margin-left: 5vw;
+        margin-left: 0vw;
     }
 
     input, textarea {
@@ -182,11 +186,6 @@ textarea {
 }
 
 @media (max-width: 768px) {
-    .contact-form-container {
-        margin-left: 17vw;
-        margin-top: 20vh;
-    }
-
     h2 {
         font-size: 2em;
     }
@@ -239,8 +238,5 @@ textarea {
 @media (max-width: 480px) {
     .contact-form-container {
         width: 90vw;
-        margin-bottom: 20vh;
-        margin-left: 5vw;
-        margin-top: 30vh;
     }
 }
