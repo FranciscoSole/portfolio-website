@@ -243,26 +243,17 @@ main{
 
 
 @media(max-width: 1920px){
-    #working #description{
+    #working #description, #student #description, #me #description{
         height: 70vh;
         width: 80vw;
     }
+
     #working #description > p {
         font-size: 1em;
     }
 
-    #student #description{
-        height: 70vh;
-        width: 80vw;
-    }
-
     #student #description > p {
         font-size: 1em;
-    }
-
-    #me #description{
-        height: 70vh;
-        width: 80vw;
     }
 
     #me #description > p {
@@ -280,6 +271,10 @@ main{
 }
 
 @media (max-width: 1200px) {
+    #working #description, #student #description, #me #description{
+        height: 60vh;
+        width: 80vw;
+    }
     #text-container > #title{
         margin-top: 2vh;
         font-size: 2.4em;
