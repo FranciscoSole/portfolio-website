@@ -172,6 +172,9 @@ main{
 }
 
 @media(max-width: 2560px){
+    main{
+        overflow: hidden;
+    }
     #text-container #title{
         font-size: 3em;
     }
