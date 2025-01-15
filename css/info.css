@@ -135,7 +135,7 @@ main{
 
     #student #description{
         width: 70vw;
-        height: 35vh;
+        height: 35vh!important;
     }
     #student #description > p {
         font-size: 1.45em;
@@ -143,7 +143,7 @@ main{
 
     #me #description{
         width: 50vw;
-        height: 60vh;
+        height: 64vh;
     }
     #me #description > p {
         font-size: 1.6em;
@@ -196,14 +196,14 @@ main{
     }
 
     #working #description{
-        height: 72vh;
+        height: 76vh;
     }
     #working #description > p {
         font-size: 1.3em;
     }
 
     #student #description{
-        height: 35vh;
+        height: 35vh!important;
     }
     #student #description > p {
         font-size: 1.3em;
@@ -211,7 +211,7 @@ main{
 
     #me #description{
         width: 50vw;
-        height: 60vh;
+        height: 64vh;
     }
     #me #description > p {
         font-size: 1.3em;
