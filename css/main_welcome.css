@@ -44,11 +44,11 @@
     width: 100vw;
     height: 100vh;
     background-color: black;
-    animation: blindAnimation ease-in-out 5.5s 1;
+    animation: blindAnimation ease-in-out 5.45s 1;
 }
 .loadingText{
     position: relative;
-    animation: fadeInAnimation ease-in-out 5.5s 1 alternate; 
+    animation: fadeInAnimation ease-in-out 5.45s 1 alternate; 
 }
 
 #name{
