@@ -176,8 +176,15 @@ main{
 }
 
 @media(max-width: 2560px){
-    main{
+    main {
+        justify-content: center; /* No afecta a los hijos directamente */
         overflow: hidden; /* Evita desbordamientos */
+    }
+
+    main > :not(#start) {
+        justify-content: center; /* Centra los elementos */
+        align-items: center; /* Centra el contenido verticalmente */
+        margin-top: 0vh;
     }
 
     #text-container #title{
@@ -269,6 +276,25 @@ main{
 }
 
 @media (max-width: 1200px) {
+    main {
+        justify-content: unset; /* No afecta a los hijos directamente */
+    }
+
+    main > #start {
+        flex: 1 0 100%; /* Asegura que ocupe toda la línea */
+        display: flex; /* Asegura que sea un contenedor flexible */
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > :not(#start) {
+        flex: 1 0 100%; /* Hacer que los otros elementos ocupen todo el ancho */
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex; /* Asegura que sean contenedores flexibles */
+        margin-top: 2vh;
+    }
+
     #text-container > #title{
         margin-top: 2vh;
         font-size: 2.4em;
@@ -282,9 +308,14 @@ main{
         width: 90vw;
     }
 
-    #working #description{
-        height: 60vh;
+    main{
+        overflow: auto;
     }
+    #working #description, #student #description, #me #description{
+        height: auto;
+        max-height: 80vh;
+    }
+
     #working #description > p {
         font-size: 1em;
     }
@@ -293,16 +324,8 @@ main{
         font-size: 1.8em;
     }
 
-    #student #description{
-        height: 60vh;
-    }
-
     #student #description > p {
         font-size: 1.2em;
-    }
-
-    #me #description{
-        height: 60vh;
     }
 
     #me #description > p {
@@ -324,7 +347,7 @@ main{
     }
 
     #student #description > p{
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     #me #description > p {
@@ -404,12 +427,12 @@ main{
     #text-container > #arrow{
         font-size: 1.4em;
     }
-
+/* 
     #description {
         height: 80vh;
         width: 90vw;
         margin-bottom: 1vh;
-    }
+    } */
 }
 
 
