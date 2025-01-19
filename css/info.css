@@ -313,7 +313,7 @@ main{
     }
     #working #description, #student #description, #me #description{
         height: auto;
-        max-height: 80vh;
+        max-height: 75vh;
     }
 
     #working #description > p {
